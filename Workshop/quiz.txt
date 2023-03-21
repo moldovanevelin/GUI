@@ -1,0 +1,4 @@
+What's the name of this sequence? 0,1,1,2,3,5,8,13,21:Recaman's sequence,Fibonacci numbers,Prime numbers,Catalan numbers:Fibonacci numbers
+Sum of the interior angles of triangle is:210,360,180,90:180
+Which is the smallest?:-1,-1/2,0,3:-1
+Find the missing term:4,-2,1,-1/2,?:1/4,-1/4,1/8,-1/8:1/4
