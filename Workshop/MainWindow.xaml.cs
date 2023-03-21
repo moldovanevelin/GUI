@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Workshop02;
 
 namespace GUI02EnglishWords
 {
@@ -29,8 +30,8 @@ namespace GUI02EnglishWords
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            List<Word> words = File.ReadAllLines("words.txt")
-                .Select(t => new Word(t.Split(':')[1], t.Split(':')[0])).ToList();
+            List<Quiz> words = File.ReadAllLines("words.txt")
+                .Select(t => new Quiz(t.Split(':')[0], t.Split(':')[2], t.Split(':')[1].Split(",").ToList())).ToList();
 
             words.ForEach(t =>
             {
@@ -40,43 +41,46 @@ namespace GUI02EnglishWords
                 l.Margin = new Thickness(20);
                 l.Width = this.ActualWidth / 6;
                 l.Height = this.ActualHeight / 6;
-                wrap.Children.Add(l);
-
-                l.MouseLeftButtonDown += L_MouseLeftButtonDown;
+                wrap.Children.Add(l);               
             });
         }
 
         private void L_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            Label l = (sender as Label);
-            Word w = (Word)(l.Tag);
+            if (e.Source is Label)
+            {
+                Label l = (sender as Label);
+                Quiz w = (Quiz)(l.Tag);
 
-            WordCheckWindow wcw = new WordCheckWindow(w);
-            if (wcw.ShowDialog() == true)
-            {
-                l.Background = Brushes.LightGreen;
-                l.IsEnabled = false;
-            }
-            else
-            {
-                l.Background = Brushes.LightPink;
-                l.IsEnabled = false;
+                AnswerCheckWindow wcw = new AnswerCheckWindow(w);
+                if (wcw.ShowDialog() == true)
+                {
+                    l.Background = Brushes.LightGreen;
+                    l.IsEnabled = false;
+                }
+                else
+                {
+                    l.Background = Brushes.LightPink;
+                    l.IsEnabled = false;
+                }
             }
         }
     }
 
-    public class Word
+    public class Quiz
     {
-        private string english;
-        private string hungarian;
+        private string question;
+        private string rightAnswer;
+        private List<string> answers;
 
-        public Word(string english, string hungarian)
+        public Quiz(string question, string rightAnswer, List<string> answers)
         {
-            this.English = english;
-            this.Hungarian = hungarian;
+            this.question = question;
+            this.rightAnswer = rightAnswer;
+            this.answers = answers;
         }
-
-        public string English { get => english; set => english = value; }
-        public string Hungarian { get => hungarian; set => hungarian = value; }
+        public string Question { get; set; }
+        public List<string> Answers { get; set; }
+        public string RightAnswer { get; set; }
     }
 }

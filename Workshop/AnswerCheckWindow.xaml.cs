@@ -17,7 +17,7 @@ namespace Workshop02
     /// <summary>
     /// Interaction logic for WordCheckWindow.xaml
     /// </summary>
-    public partial class WordCheckWindow : Window
+    public partial class AnswerCheckWindow : Window
     {
         private Word w;
         public WordCheckWindow(Word w)
