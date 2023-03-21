@@ -1,16 +1,17 @@
-﻿<Window x:Class="GUI02EnglishWords.WordCheckWindow"
+﻿<Window x:Class="Workshop02.AnswerCheckWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:GUI02EnglishWords"
+        xmlns:local="clr-namespace:Workshop02"
         mc:Ignorable="d"
-        Title="WordCheckWindow" Height="216" Width="245">
+        Title="AnswerCheckWindow" Height="244" Width="245" Closing="Window_Closing">    
     <StackPanel>
-        <Label Content="Hungarian Word" Background="LightBlue" Padding="10" />
-        <Label x:Name="lb_hun"  Padding="10" />
-        <Label Content="English Word" Background="LightBlue" Padding="10" />
-        <TextBox x:Name="tb_eng" Padding="10" />
-        <Button Content="Check!" Padding="10" Click="Button_Click" />
+        <Label Content="Question" Background="LightBlue" Padding="10" />
+        <Label x:Name="lb_question"  Padding="10" />
+        <Label Content="Answer" Background="LightBlue" Padding="10" />
+        <ComboBox x:Name="cb_answers" Padding="10" />
+        <Label x:Name="timerLabel" Padding="10" FontSize="12" HorizontalContentAlignment="Center" FontStyle="Italic"/>
+        <Button Content="Check!" x:Name="button" Padding="10" Click="Button_Click" Background="AliceBlue" />
     </StackPanel>
 </Window>

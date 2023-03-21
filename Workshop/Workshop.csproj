@@ -5,6 +5,17 @@
     <TargetFramework>net6.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <RestoreFallbackFolders>clear</RestoreFallbackFolders>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="quiz.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="quiz.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 
 </Project>

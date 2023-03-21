@@ -15,7 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Workshop02;
 
-namespace GUI02EnglishWords
+namespace Workshop02
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -29,31 +29,35 @@ namespace GUI02EnglishWords
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            List<Quiz> words = File.ReadAllLines("words.txt")
+        {            
+            List<Quiz> quiz = File.ReadAllLines("quiz.txt")
                 .Select(t => new Quiz(t.Split(':')[0], t.Split(':')[2], t.Split(':')[1].Split(",").ToList())).ToList();
 
-            words.ForEach(t =>
-            {
+            quiz.ForEach(t => {
                 Label l = new Label();
                 l.Tag = t;
                 l.Background = Brushes.LightBlue;
+                l.FontSize = 32;
+                l.Content = "?";
+                l.VerticalContentAlignment = VerticalAlignment.Center;
+                l.HorizontalContentAlignment = HorizontalAlignment.Center;
                 l.Margin = new Thickness(20);
                 l.Width = this.ActualWidth / 6;
-                l.Height = this.ActualHeight / 6;
-                wrap.Children.Add(l);               
+                l.Height = this.ActualHeight / 6;     
+                wrap.Children.Add(l);
             });
+            
         }
 
         private void L_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             if (e.Source is Label)
             {
-                Label l = (sender as Label);
-                Quiz w = (Quiz)(l.Tag);
+                Label l = e.Source as Label;
+                Quiz q = (Quiz)(l.Tag);
 
-                AnswerCheckWindow wcw = new AnswerCheckWindow(w);
-                if (wcw.ShowDialog() == true)
+                AnswerCheckWindow acw = new AnswerCheckWindow(q);
+                if (acw.ShowDialog() == true)
                 {
                     l.Background = Brushes.LightGreen;
                     l.IsEnabled = false;
@@ -79,8 +83,8 @@ namespace GUI02EnglishWords
             this.rightAnswer = rightAnswer;
             this.answers = answers;
         }
-        public string Question { get; set; }
-        public List<string> Answers { get; set; }
-        public string RightAnswer { get; set; }
+        public string Question { get => question; set => question = value; }
+        public List<string> Answers { get => answers; set => answers = value; }
+        public string RightAnswer { get => rightAnswer; set => rightAnswer=value; }
     }
 }
