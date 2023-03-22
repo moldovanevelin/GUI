@@ -2,3 +2,5 @@ What's the name of this sequence? 0,1,1,2,3,5,8,13,21:Recaman's sequence,Fibonac
 Sum of the interior angles of triangle is:210,360,180,90:180
 Which is the smallest?:-1,-1/2,0,3:-1
 Find the missing term:4,-2,1,-1/2,?:1/4,-1/4,1/8,-1/8:1/4
+What is the integral of sinx?:-sinx,-tgx,-cosx,tgx:-cosx
+How many solution does this have? |x^2-1|=0:2,1,0,3:2
