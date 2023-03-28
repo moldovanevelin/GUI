@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 
+
 namespace Workshop_03
 {
     /// <summary>
@@ -24,7 +25,7 @@ namespace Workshop_03
         private Soldier s;
         public EditTrooper(Soldier s)
         {
-            InitializeComponent();
+            InitializeComponent();            
             this.s = s;
         }
 

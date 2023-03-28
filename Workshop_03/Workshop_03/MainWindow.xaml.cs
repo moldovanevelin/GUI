@@ -28,7 +28,6 @@ namespace Workshop_03
             InitializeComponent();
                   
             money = 0;
-
             army = new ObservableCollection<Soldier>() { };           
             army.Add(new Soldier() { Type = "marine", Power = 6, Vitality = 8, Value = 7 });
             army.Add(new Soldier() { Type = "pilot", Power = 7, Vitality = 6, Value = 9 });
@@ -72,7 +71,9 @@ namespace Workshop_03
         {
             if (lbox_left.SelectedItem != null && lbox_left.SelectedItem is Soldier s)
             {
+                Soldier selectedTrooper = (Soldier)lbox_left.SelectedItem;
                 EditTrooper et = new EditTrooper(s);
+                et.DataContext = selectedTrooper;
                 et.ShowDialog();
             }
         }
