@@ -8,7 +8,7 @@
         Title="Edit Trooper" Height="559" Width="400" FontSize="18" Visibility="Visible">
     <StackPanel Grid.Column="2" DataContext="{Binding ElementName=lbox_left, Path=SelectedItem}">
         <Label  Content="Name" Background="AliceBlue" Padding="10" />
-        <TextBox x:Name="tb_name" Text="{Binding Type, UpdateSourceTrigger=PropertyChanged}" Padding="10" />
+        <TextBox x:Name="tb_name" Text="{Binding Type, UpdateSourceTrigger=PropertyChanged}" Padding="10"/>
         <Label Content="Power" Background="AliceBlue" Padding="10" />
         <TextBox x:Name="tb_power" Text="{Binding Power, UpdateSourceTrigger=PropertyChanged}" Padding="10" />
         <Label Content="Vitality" Background="AliceBlue" Padding="10" />
