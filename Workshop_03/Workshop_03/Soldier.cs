@@ -14,8 +14,8 @@ namespace Workshop_03
         private int power;
         private int vitality;
         private int value;
-      
-
+        private int cost;
+        private static int _totalCost;
         public event PropertyChangedEventHandler? PropertyChanged;
         private void OnPropertyChanged([CallerMemberName] string propertyName="")
         {
@@ -29,7 +29,7 @@ namespace Workshop_03
         public int Power { get { return power; } set { power = value; OnPropertyChanged(); } }
         public int Vitality { get { return vitality; } set { vitality = value; OnPropertyChanged(); } }
         public int Value { get { return value; } set { this.value = value; OnPropertyChanged(); } }
-
-       
+        public int Cost { get { return power*vitality*this.value; } set { cost = value; OnPropertyChanged(); } }
+        public int TotalCost { get { return _totalCost; } set { _totalCost = value; OnPropertyChanged(); } }
     }
 }
