@@ -44,7 +44,7 @@ namespace Workshop_03
            if (lbox_left.SelectedItem!=null && lbox_left.SelectedItem is Soldier s)
            {
                 lb_right.Items.Add(new string($"{s.Type} {s.Power} {s.Vitality} {s.Value}"));
-                lb_cost.Content = $"Money: {money+=s.Value}";
+                lb_cost.Content = $"Money: {money+=s.Value*s.Vitality*s.Power}";
            }
            if (lbox_left.SelectedItem == null)
            {
@@ -58,7 +58,7 @@ namespace Workshop_03
             {
                 if ((money - s.Value) >= 0 && lb_right.Items.Contains($"{s.Type} {s.Power} {s.Vitality} {s.Value}"))
                 {
-                    lb_cost.Content = $"Money: {money -= s.Value}";
+                    lb_cost.Content = $"Money: {money -= s.Value * s.Vitality * s.Power}";
                 }
                 lb_right.Items.Remove(new string($"{s.Type} {s.Power} {s.Vitality} {s.Value}"));
             }
