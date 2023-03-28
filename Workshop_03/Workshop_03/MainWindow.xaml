@@ -15,24 +15,21 @@
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
-        <!--#region  first column-->       
-        <ListBox Grid.Column="0" x:Name="lbox">
+        <!--#region  first column-->
+        <ListBox Grid.Column="0" x:Name="lbox_left" HorizontalContentAlignment="Stretch" ItemsSource="{Binding army}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Stretch">
-                        <StackPanel>
-                            <ProgressBar Value="{Binding Type}" Foreground="{Binding RelativeSource={RelativeSource Mode=Self}}" />
-                            <ProgressBar Value="{Binding Power}" Foreground="{Binding RelativeSource={RelativeSource Mode=Self}}"/>
-                            <ProgressBar Value="{Binding Vitality}" Foreground="{Binding RelativeSource={RelativeSource Mode=Self}}"/>
-                            <ProgressBar Value="{Binding Value}" Foreground="{Binding RelativeSource={RelativeSource Mode=Self}}"/>
+                    <StackPanel Orientation="Vertical">
+                        <Label Content="{Binding Type}"/>
+                        <StackPanel Orientation="Horizontal">                            
+                            <ProgressBar Value="{Binding Power}" Foreground="{Binding RelativeSource={RelativeSource Mode=Self},Path=Value, Converter={StaticResource ProgressBarColorConverter}}" Minimum="0" Maximum="10" Width="70" Height="10" Margin="10"/>
+                            <ProgressBar Value="{Binding Vitality}" Foreground="{Binding RelativeSource={RelativeSource Mode=Self},Path=Value,Converter={StaticResource ProgressBarColorConverter}}" Minimum="0" Maximum="10" Width="70" Height="10" Margin="10"/>
+                            <ProgressBar Value="{Binding Value}" Foreground="{Binding RelativeSource={RelativeSource Mode=Self},Path=Value, Converter={StaticResource ProgressBarColorConverter}}" Minimum="0" Maximum="10" Width="70" Height="10" Margin="10"/>
                         </StackPanel>
-                    </Border>
+                    </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-
-
-
 
         <!--#endregion-->
         <!--#region second column-->
@@ -43,12 +40,17 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Grid.Row="0" Margin="10" x:Name="lb_cost" Content="Money: " Height="40" FontSize="14" FontFamily="Arial" VerticalAlignment="Center"/>
+            <Label Grid.Row="0" Margin="10" x:Name="lb_cost" Height="40" FontSize="14" FontFamily="Arial" VerticalAlignment="Center"/>
             <Button Grid.Row="1" Margin="10" x:Name="b_add" Content="Add To Army" Click="b_add_Click" MinHeight="40"/>
             <Button Grid.Row="2" Margin="10" x:Name="b_remove" Content="Remove From Army" Click="b_remove_Click" MinHeight="40"/>
             <Button Grid.Row="3" Margin="10" x:Name="b_edit" Content="Edit Trooper" Click="b_edit_Click" MinHeight="40"/>
         </Grid>
 
+        <!--#endregion-->
+        <!--#region third column-->
+        <ListBox Grid.Column="2" x:Name="lb_right" >
+            
+        </ListBox>
         <!--#endregion-->
     </Grid>
 </Window>

@@ -20,3 +20,5 @@ D:\VS_Projects\GUI\Workshop_03\Workshop_03\obj\Debug\net6.0-windows\Workshop_03.
 D:\VS_Projects\GUI\Workshop_03\Workshop_03\obj\Debug\net6.0-windows\Workshop_03.genruntimeconfig.cache
 D:\VS_Projects\GUI\Workshop_03\Workshop_03\obj\Debug\net6.0-windows\ref\Workshop_03.dll
 D:\VS_Projects\GUI\Workshop_03\Workshop_03\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+D:\VS_Projects\GUI\Workshop_03\Workshop_03\obj\Debug\net6.0-windows\EditTrooper.g.cs
+D:\VS_Projects\GUI\Workshop_03\Workshop_03\obj\Debug\net6.0-windows\EditTrooper.baml
