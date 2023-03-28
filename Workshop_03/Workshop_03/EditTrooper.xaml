@@ -5,14 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Workshop_03"        
         mc:Ignorable="d"
-        Title="Edit Trooper" Height="559" Width="400" FontSize="18">
+        Title="Edit Trooper" Height="559" Width="400" FontSize="18" Visibility="Visible">
     <StackPanel Grid.Column="2" DataContext="{Binding ElementName=lbox_left, Path=SelectedItem}">
+        <Label  Content="Name" Background="AliceBlue" Padding="10" />
+        <TextBox x:Name="tb_name" Text="{Binding Type, UpdateSourceTrigger=PropertyChanged}" Padding="10" />
         <Label Content="Power" Background="AliceBlue" Padding="10" />
-        <TextBox Text="{Binding Power, UpdateSourceTrigger=PropertyChanged}" Padding="10" />
+        <TextBox x:Name="tb_power" Text="{Binding Power, UpdateSourceTrigger=PropertyChanged}" Padding="10" />
         <Label Content="Vitality" Background="AliceBlue" Padding="10" />
-        <TextBox Text="{Binding Vitality, UpdateSourceTrigger=PropertyChanged}" Padding="10" />
+        <TextBox x:Name="tb_vitality" Text="{Binding Vitality, UpdateSourceTrigger=PropertyChanged}" Padding="10" />
         <Label Content="Value" Background="AliceBlue" Padding="10" />
-        <TextBox Text="{Binding Value, UpdateSourceTrigger=PropertyChanged}" Padding="10" />
-        <Button Content="Save!" Padding="10" Click="Button_Click" />
+        <TextBox x:Name="tb_value" Text="{Binding Value, UpdateSourceTrigger=PropertyChanged}" Padding="10" />
+        <Button x:Name="b_save" Content="Save!" Padding="10" Click="Button_Click" Background="LightBlue"/>
     </StackPanel>
 </Window>

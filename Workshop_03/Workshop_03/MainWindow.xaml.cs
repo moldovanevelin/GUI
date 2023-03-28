@@ -56,11 +56,11 @@ namespace Workshop_03
         {
             if (lbox_left.SelectedItem != null && lbox_left.SelectedItem is Soldier s)
             {
-                lb_right.Items.Remove(new string($"{s.Type} {s.Power} {s.Vitality} {s.Value}"));
-                if ((money-s.Value)>=0)
+                if ((money - s.Value) >= 0 && lb_right.Items.Contains($"{s.Type} {s.Power} {s.Vitality} {s.Value}"))
                 {
                     lb_cost.Content = $"Money: {money -= s.Value}";
                 }
+                lb_right.Items.Remove(new string($"{s.Type} {s.Power} {s.Vitality} {s.Value}"));
             }
             if (lbox_left.SelectedItem == null)
             {
@@ -70,10 +70,10 @@ namespace Workshop_03
 
         private void b_edit_Click(object sender, RoutedEventArgs e)
         {
-            if (e.Source is Soldier s)
+            if (lbox_left.SelectedItem != null && lbox_left.SelectedItem is Soldier s)
             {
-                EditTrooper et = new EditTrooper();
-                et.Show();
+                EditTrooper et = new EditTrooper(s);
+                et.ShowDialog();
             }
         }
 

@@ -20,15 +20,25 @@ namespace Workshop_03
     /// Interaction logic for WordCheckWindow.xaml
     /// </summary>
     public partial class EditTrooper : Window
-    {       
-        public EditTrooper()
+    {
+        private Soldier s;
+        public EditTrooper(Soldier s)
         {
             InitializeComponent();
+            this.s = s;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            b_save.Background = Brushes.Blue;
+            if (tb_name.Text != null && tb_power.Text != null && tb_vitality.Text != null && tb_value.Text != null)
+            {
+                s.Type = tb_name.Text;
+                s.Power = int.Parse(tb_power.Text);
+                s.Vitality = int.Parse(tb_vitality.Text);
+                s.Value = int.Parse(tb_value.Text);                
+                this.Close();
+            }
         }
     }
 }
