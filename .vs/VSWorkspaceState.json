@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Notepad",
+    "\\Notepad\\Notepad",
+    "\\Workshop_02\\Workshop"
   ],
-  "SelectedNode": "\\Workshop.sln",
+  "SelectedNode": "\\Notepad\\Notepad.sln",
   "PreviewInSolutionExplorer": false
 }
