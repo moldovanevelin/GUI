@@ -25,7 +25,7 @@ namespace Workshop_03
         private Soldier s;
         public EditTrooper(Soldier s)
         {
-            InitializeComponent();            
+            InitializeComponent();
             this.s = s;
         }
 
@@ -37,8 +37,35 @@ namespace Workshop_03
                 s.Type = tb_name.Text;
                 s.Power = int.Parse(tb_power.Text);
                 s.Vitality = int.Parse(tb_vitality.Text);
-                s.Value = int.Parse(tb_value.Text);                
+                s.Value = int.Parse(tb_value.Text);
                 this.Close();
+            }
+        }
+        private void Window_Closing(object sender, CancelEventArgs e)
+        {
+            if (tb_name.Text != null && tb_power.Text != null && tb_vitality.Text != null && tb_value.Text != null && b_save.Background == Brushes.Blue)
+            {
+                MessageBoxResult result = MessageBox.Show("Do you want to save changes?", "Exit", MessageBoxButton.YesNo);
+                if (result == MessageBoxResult.Yes)
+                {
+                    e.Cancel = false;
+                }
+                else
+                {
+                    e.Cancel = true;
+                }
+            }
+            else
+            {
+                MessageBoxResult result = MessageBox.Show("Do you want to close the window?", "Exit", MessageBoxButton.YesNo);
+                if (result == MessageBoxResult.Yes)
+                {
+                    e.Cancel = false;
+                }
+                else
+                {
+                    e.Cancel = true;
+                }
             }
         }
     }

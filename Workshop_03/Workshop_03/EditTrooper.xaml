@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Workshop_03" 
         mc:Ignorable="d"
-        Title="Edit Trooper" Height="559" Width="400" FontSize="18" Visibility="Visible">
+        Title="Edit Trooper" Height="559" Width="400" FontSize="18" Visibility="Visible" Closing="Window_Closing">
     <StackPanel Grid.Column="2" DataContext="{Binding}">
         <Label  Content="Name" Background="AliceBlue" Padding="10" />
         <TextBox x:Name="tb_name" Text="{Binding Type, UpdateSourceTrigger=PropertyChanged}" Padding="10"/>
