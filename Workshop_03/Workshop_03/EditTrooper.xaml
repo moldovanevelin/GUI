@@ -8,13 +8,13 @@
         Title="Edit Trooper" Height="559" Width="400" FontSize="18" Visibility="Visible" Closing="Window_Closing">
     <StackPanel Grid.Column="2" DataContext="{Binding}">
         <Label  Content="Name" Background="AliceBlue" Padding="10" />
-        <TextBox x:Name="tb_name" Text="{Binding Type, UpdateSourceTrigger=PropertyChanged}" Padding="10"/>
+        <TextBox x:Name="tb_name" Text="{Binding Type}" Padding="10"/>
         <Label Content="Power" Background="AliceBlue" Padding="10" />
-        <TextBox x:Name="tb_power" Text ="{Binding Power, UpdateSourceTrigger=PropertyChanged}" Padding="10" />
+        <TextBox x:Name="tb_power" Text ="{Binding Power}" Padding="10" />
         <Label Content="Vitality" Background="AliceBlue" Padding="10" />
-        <TextBox x:Name="tb_vitality" Text="{Binding Vitality, UpdateSourceTrigger=PropertyChanged}" Padding="10" />
+        <TextBox x:Name="tb_vitality" Text="{Binding Vitality}" Padding="10" />
         <Label Content="Value" Background="AliceBlue" Padding="10" />
-        <TextBox x:Name="tb_value" Text="{Binding Value, UpdateSourceTrigger=PropertyChanged}" Padding="10" />
+        <TextBox x:Name="tb_value" Text="{Binding Value}" Padding="10" />
         <Button x:Name="b_save" Content="Save!" Padding="10" Click="Button_Click" Background="LightBlue"/>
     </StackPanel>
 </Window>

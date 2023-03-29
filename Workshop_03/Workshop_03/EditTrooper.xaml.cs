@@ -32,41 +32,21 @@ namespace Workshop_03
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             b_save.Background = Brushes.Blue;
-            if (tb_name.Text != null && tb_power.Text != null && tb_vitality.Text != null && tb_value.Text != null)
-            {
-                s.Type = tb_name.Text;
-                s.Power = int.Parse(tb_power.Text);
-                s.Vitality = int.Parse(tb_vitality.Text);
-                s.Value = int.Parse(tb_value.Text);
-                this.Close();
-            }
+            this.Close();
         }
         private void Window_Closing(object sender, CancelEventArgs e)
         {
-            if (tb_name.Text != null && tb_power.Text != null && tb_vitality.Text != null && tb_value.Text != null && b_save.Background == Brushes.Blue)
+            MessageBoxResult result = MessageBox.Show("Do you want to close the window?", "Confirm", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (result == MessageBoxResult.No)
             {
-                MessageBoxResult result = MessageBox.Show("Do you want to save changes?", "Exit", MessageBoxButton.YesNo);
-                if (result == MessageBoxResult.Yes)
-                {
-                    e.Cancel = false;
-                }
-                else
-                {
-                    e.Cancel = true;
-                }
+                e.Cancel = true;
+                return;
             }
             else
             {
-                MessageBoxResult result = MessageBox.Show("Do you want to close the window?", "Exit", MessageBoxButton.YesNo);
-                if (result == MessageBoxResult.Yes)
-                {
-                    e.Cancel = false;
-                }
-                else
-                {
-                    e.Cancel = true;
-                }
+                e.Cancel = false;
             }
+
         }
     }
 }

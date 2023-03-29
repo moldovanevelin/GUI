@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Media;
 
 namespace Workshop_03
 {
@@ -25,6 +26,7 @@ namespace Workshop_03
     {
         public ObservableCollection<Soldier> army;
         public ObservableCollection<Soldier> army_choosen;
+       
         public MainWindow()
         {
             InitializeComponent();
@@ -35,6 +37,8 @@ namespace Workshop_03
             army.Add(new Soldier() { Type = "engineer", Power = 8, Vitality = 4, Value = 3 });
             army.Add(new Soldier() { Type = "veteran", Power = 5, Vitality = 5, Value = 2 });
             lbox_left.ItemsSource = army;
+            SoundPlayer player = new SoundPlayer(@".\Media .wav");
+            player.Play();
         }
         private void b_add_Click(object sender, RoutedEventArgs e)
         {
@@ -73,6 +77,20 @@ namespace Workshop_03
                 et.DataContext = selectedTrooper;
                 et.ShowDialog();
             }
+        }
+        private void MainWindow_Closing(object sender, CancelEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("Do you want to close the window?", "Confirm", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (result == MessageBoxResult.No)
+            {
+                e.Cancel = true;
+                return;
+            }
+            else
+            {
+                e.Cancel = false;
+            }
+            
         }
     }
 }

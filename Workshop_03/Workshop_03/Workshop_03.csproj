@@ -7,4 +7,17 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="army.jpg" />
+    <None Remove="Media .wav" />
+    <None Remove="Music.mp3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="army.jpg" />
+    <Content Include="Media .wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>

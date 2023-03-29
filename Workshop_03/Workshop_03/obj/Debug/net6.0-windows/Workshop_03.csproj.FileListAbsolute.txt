@@ -1,13 +1,18 @@
 D:\VS_Projects\GUI\Workshop_03\Workshop_03\bin\Debug\net6.0-windows\Workshop_03.exe
+D:\VS_Projects\GUI\Workshop_03\Workshop_03\bin\Debug\net6.0-windows\Media .wav
 D:\VS_Projects\GUI\Workshop_03\Workshop_03\bin\Debug\net6.0-windows\Workshop_03.deps.json
 D:\VS_Projects\GUI\Workshop_03\Workshop_03\bin\Debug\net6.0-windows\Workshop_03.runtimeconfig.json
 D:\VS_Projects\GUI\Workshop_03\Workshop_03\bin\Debug\net6.0-windows\Workshop_03.dll
 D:\VS_Projects\GUI\Workshop_03\Workshop_03\bin\Debug\net6.0-windows\Workshop_03.pdb
 D:\VS_Projects\GUI\Workshop_03\Workshop_03\obj\Debug\net6.0-windows\Workshop_03.csproj.AssemblyReference.cache
+D:\VS_Projects\GUI\Workshop_03\Workshop_03\obj\Debug\net6.0-windows\EditTrooper.g.cs
 D:\VS_Projects\GUI\Workshop_03\Workshop_03\obj\Debug\net6.0-windows\MainWindow.g.cs
 D:\VS_Projects\GUI\Workshop_03\Workshop_03\obj\Debug\net6.0-windows\App.g.cs
+D:\VS_Projects\GUI\Workshop_03\Workshop_03\obj\Debug\net6.0-windows\Workshop_03_Content.g.cs
+D:\VS_Projects\GUI\Workshop_03\Workshop_03\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
 D:\VS_Projects\GUI\Workshop_03\Workshop_03\obj\Debug\net6.0-windows\Workshop_03_MarkupCompile.cache
 D:\VS_Projects\GUI\Workshop_03\Workshop_03\obj\Debug\net6.0-windows\Workshop_03_MarkupCompile.lref
+D:\VS_Projects\GUI\Workshop_03\Workshop_03\obj\Debug\net6.0-windows\EditTrooper.baml
 D:\VS_Projects\GUI\Workshop_03\Workshop_03\obj\Debug\net6.0-windows\MainWindow.baml
 D:\VS_Projects\GUI\Workshop_03\Workshop_03\obj\Debug\net6.0-windows\Workshop_03.g.resources
 D:\VS_Projects\GUI\Workshop_03\Workshop_03\obj\Debug\net6.0-windows\Workshop_03.GeneratedMSBuildEditorConfig.editorconfig
@@ -19,6 +24,3 @@ D:\VS_Projects\GUI\Workshop_03\Workshop_03\obj\Debug\net6.0-windows\refint\Works
 D:\VS_Projects\GUI\Workshop_03\Workshop_03\obj\Debug\net6.0-windows\Workshop_03.pdb
 D:\VS_Projects\GUI\Workshop_03\Workshop_03\obj\Debug\net6.0-windows\Workshop_03.genruntimeconfig.cache
 D:\VS_Projects\GUI\Workshop_03\Workshop_03\obj\Debug\net6.0-windows\ref\Workshop_03.dll
-D:\VS_Projects\GUI\Workshop_03\Workshop_03\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
-D:\VS_Projects\GUI\Workshop_03\Workshop_03\obj\Debug\net6.0-windows\EditTrooper.g.cs
-D:\VS_Projects\GUI\Workshop_03\Workshop_03\obj\Debug\net6.0-windows\EditTrooper.baml
