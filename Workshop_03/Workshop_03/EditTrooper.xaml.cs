@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -32,6 +33,14 @@ namespace Workshop_03
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             b_save.Background = Brushes.Blue;
+            BindingExpression binding = tb_name.GetBindingExpression(TextBox.TextProperty);
+            BindingExpression binding1 = tb_power.GetBindingExpression(TextBox.TextProperty);
+            BindingExpression binding2 = tb_vitality.GetBindingExpression(TextBox.TextProperty);
+            BindingExpression binding3 = tb_value.GetBindingExpression(TextBox.TextProperty);
+            binding.UpdateSource();
+            binding1.UpdateSource();
+            binding2.UpdateSource();
+            binding3.UpdateSource();
             this.Close();
         }
         private void Window_Closing(object sender, CancelEventArgs e)
@@ -48,5 +57,6 @@ namespace Workshop_03
             }
 
         }
+        
     }
 }
