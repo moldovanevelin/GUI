@@ -40,39 +40,39 @@ namespace SZTGUI_GYAK04
         {
             athletes.Add(new Athlete()
             {
-                Name = "Józsi",
+                Name = "Antonio Brown",
                 Record = 8,
                 RecordThisYear = 10,
                 Permission = true,
-                Association = "Wild Horses",
-                Comp_num = "Kislabda hajítás",
+                Association = "Butchers",
+                Comp_num = "Football player",
             });
             athletes.Add(new Athlete()
             {
-                Name = "Sanyi",
-                Record = 8,
-                RecordThisYear = 10,
+                Name = "Kei Nishikori",
+                Record = 12,
+                RecordThisYear = 8,
                 Permission = false,
-                Association = "ASDFGH",
-                Comp_num = "Ksdfghjk",
+                Association = "The Smashers",
+                Comp_num = "Tennis player",
             });
             athletes.Add(new Athlete()
             {
-                Name = "Kati",
-                Record = 8,
-                RecordThisYear = 10,
+                Name = "Maria Sharapova",
+                Record = 13,
+                RecordThisYear = 12,
                 Permission = true,
-                Association = "sdf",
-                Comp_num = "sdfghj",
+                Association = "Hoopsters",
+                Comp_num = "Basketball player",
             });
             athletes.Add(new Athlete()
             {
-                Name = "Ibolya",
-                Record = 8,
-                RecordThisYear = 10,
+                Name = "Venus Williams",
+                Record = 2,
+                RecordThisYear = 1,
                 Permission = true,
-                Association = "wrfghd",
-                Comp_num = "jtrktzj2",
+                Association = "Hoopsters",
+                Comp_num = "Swimmer",
             });
         }
 

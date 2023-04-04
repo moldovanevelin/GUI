@@ -23,24 +23,19 @@
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <Border BorderBrush="Black" BorderThickness="1">
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="1*" />
-                                    <ColumnDefinition Width="1*" />
-                                </Grid.ColumnDefinitions>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="1*" />
-                                    <RowDefinition Height="1*" />
-                                    <RowDefinition Height="1*" />
-                                </Grid.RowDefinitions>
-                            <Label Content="{Binding Name}" FontSize="14" Background="{Binding Permission, Converter={StaticResource colorconvert}}" FontWeight="Bold" />                             
-                            </Grid>
+                            <Label Content="{Binding Name}" FontSize="14" Background="{Binding Permission, Converter={StaticResource colorconvert}}" FontWeight="Bold" />  
                         </Border>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
-        <ListBox Grid.Column="1">
-            
+        <ListBox Grid.Column="1" ItemsSource="{Binding Competition}" SelectedItem="{Binding SelectedFromCompetition}" HorizontalContentAlignment="Stretch">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="Black" BorderThickness="1">
+                        <Label Content="{Binding Name}" FontSize="14" Background="{Binding Permission, Converter={StaticResource colorconvert}}" FontWeight="Bold" />
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
         </ListBox>
         <StackPanel Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center">
             <Button x:Name="button1" Content="Add" Height="40" Width="120"
@@ -50,7 +45,7 @@
                     Background="AliceBlue" FontSize="18" FontWeight="Bold"
                     Command="{Binding RemoveFromAthletesCommand}" Margin="10"/>
             <Button x:Name="button" Content="Load" Height="40" Width="120"
-                    Background="AliceBlue" FontSize="18" FontWeight="Bold"
+                    Background="AliceBlue" FontSize="18" FontWeight="Bold"  Margin="10"
                     Command="{Binding LoadCommand}"/>
         </StackPanel>
 
