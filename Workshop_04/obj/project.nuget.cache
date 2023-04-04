@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "0syw0apX7TkKSHhgRU3ml3kiGYdCoRLW806Wk5kftY6RG5m9WqImw5PvDhfhWlfH52Aa3EKB58m5JGwN+2TLvQ==",
+  "dgSpecHash": "UgXGvyDgCcmu6RqXo12boY3TSoRlOt2mp1H5u1shn+wQF3sZ4nNNUwvLAzK0QZioadFIQm6xr0N7CcN4a7E4rQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Bartu\\source\\repos\\SZTGUI_GYAK04\\SZTGUI_GYAK04.csproj",
+  "projectFilePath": "D:\\VS_Projects\\GUI\\Workshop_04\\SZTGUI_GYAK04.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Bartu\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
-    "C:\\Users\\Bartu\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
-    "C:\\Users\\Bartu\\.nuget\\packages\\microsoft.toolkit.mvvm\\7.1.2\\microsoft.toolkit.mvvm.7.1.2.nupkg.sha512"
+    "C:\\Users\\molev\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "C:\\Users\\molev\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\molev\\.nuget\\packages\\microsoft.toolkit.mvvm\\7.1.2\\microsoft.toolkit.mvvm.7.1.2.nupkg.sha512"
   ],
   "logs": []
 }
