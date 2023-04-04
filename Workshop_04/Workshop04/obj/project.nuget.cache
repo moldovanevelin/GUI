@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "0syw0apX7TkKSHhgRU3ml3kiGYdCoRLW806Wk5kftY6RG5m9WqImw5PvDhfhWlfH52Aa3EKB58m5JGwN+2TLvQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Bartu\\source\\repos\\SZTGUI_GYAK04\\SZTGUI_GYAK04.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Bartu\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "C:\\Users\\Bartu\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\Bartu\\.nuget\\packages\\microsoft.toolkit.mvvm\\7.1.2\\microsoft.toolkit.mvvm.7.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}
