@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using SZTGUI_GYAK04.ViewModels;
+using static SZTGUI_GYAK04.AthleteDataWindow;
 
 namespace SZTGUI_GYAK04
 {
@@ -26,6 +28,6 @@ namespace SZTGUI_GYAK04
             var vm = new AthleteDataWindowViewModel();
             vm.Setup(athlete);
             this.DataContext = vm;
-        }
+        }  
     }
 }

@@ -8,12 +8,14 @@
         Title="Athlete's Data"  MinHeight="512" MinWidth="800" MaxHeight="512" MaxWidth="800">
     <Window.Resources>
         <local:BoolConverter x:Key="boolconverter" />
+        <local:EscapeUriConverter x:Key="uriConv" />
     </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
+        <Image Grid.Column="0" Source="{Binding Actual.Name, Converter={StaticResource uriConv},StringFormat='/Images/{0}.jpg'}" Stretch="UniformToFill"/>
         <StackPanel x:Name="stack" Grid.Column="1">
             <Label Content="Name" Padding="10" Background="LightGreen" FontWeight="Bold" FontFamily="Times New Roman"/>
             <TextBox Text="{Binding Actual.Name}" Padding="10" IsReadOnly="True" FontWeight="DemiBold" FontFamily="Times New Roman"/>
@@ -29,7 +31,7 @@
             <TextBox Text="{Binding Actual.Comp_num}" Padding="10" IsReadOnly="True" FontWeight="DemiBold" FontFamily="Times New Roman"/>
             <Label Content="Actual Value" Padding="10" Background="LightGreen" FontWeight="Bold" FontFamily="Times New Roman"/>
             <TextBox Text="{Binding Actual.Actual_Value}" Padding="10" IsReadOnly="True" FontWeight="DemiBold" FontFamily="Times New Roman"/>
-        </StackPanel>
+        </StackPanel>               
     </Grid>
 </Window>
 

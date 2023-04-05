@@ -10,9 +10,9 @@ namespace SZTGUI_GYAK04.ViewModels
     {
         public Athlete Actual { get; set; }
 
-        public void Setup(Athlete trooper)
+        public void Setup(Athlete athlete)
         {
-            this.Actual = trooper;
+            this.Actual = athlete;
         }
 
 
