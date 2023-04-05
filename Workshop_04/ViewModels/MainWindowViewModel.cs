@@ -16,6 +16,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using SZTGUI_GYAK04.Logic;
+using SZTGUI_GYAK04.Models;
 
 namespace SZTGUI_GYAK04.ViewModels
 {

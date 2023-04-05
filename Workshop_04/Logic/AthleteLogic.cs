@@ -5,9 +5,10 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SZTGUI_GYAK04.Models;
 using SZTGUI_GYAK04.Services;
 
-namespace SZTGUI_GYAK04
+namespace SZTGUI_GYAK04.Logic
 {
     public class AthleteLogic : IAthleteLogic
     {

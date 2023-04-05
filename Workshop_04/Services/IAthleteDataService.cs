@@ -1,4 +1,6 @@
-﻿namespace SZTGUI_GYAK04.Services
+﻿using SZTGUI_GYAK04.Models;
+
+namespace SZTGUI_GYAK04.Services
 {
     public interface IAthleteDataService
     {

@@ -8,6 +8,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using SZTGUI_GYAK04.Logic;
 using SZTGUI_GYAK04.Services;
 
 namespace SZTGUI_GYAK04

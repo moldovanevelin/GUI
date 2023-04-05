@@ -5,23 +5,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Data;
+using System.Windows.Media;
 
-namespace SZTGUI_GYAK04
+namespace SZTGUI_GYAK04.Helpers
 {
-    public class EscapeUriConverter : IValueConverter
-    {        
+    public class ColorConverter : IValueConverter
+    {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
-        {            
-            if (value.ToString().Contains(" "))
-            {                
-                string s = value.ToString().Replace(" ","%20");
-                return "/Images/"+s + ".jpg";                
+        {
+            if ((bool)value)
+            {
+                return Brushes.LightGreen;
             }
             else
             {
-                return "/Images/" + value.ToString() + ".jpg";
+                return Brushes.PaleVioletRed;
             }
-           
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

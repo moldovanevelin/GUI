@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using SZTGUI_GYAK04.Models;
 
-namespace SZTGUI_GYAK04
+namespace SZTGUI_GYAK04.Logic
 {
     public interface IAthleteLogic
     {

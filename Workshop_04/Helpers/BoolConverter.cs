@@ -7,19 +7,19 @@ using System.Threading.Tasks;
 using System.Windows.Data;
 using System.Windows.Media;
 
-namespace SZTGUI_GYAK04
+namespace SZTGUI_GYAK04.Helpers
 {
-    public class ColorConverter : IValueConverter
+    public class BoolConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             if ((bool)value)
             {
-                return Brushes.LightGreen;
+                return "Required";
             }
             else
             {
-                return Brushes.PaleVioletRed;
+                return "Not Required";
             }
         }
 

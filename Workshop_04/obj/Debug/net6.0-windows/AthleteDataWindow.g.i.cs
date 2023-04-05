@@ -61,7 +61,7 @@ namespace SZTGUI_GYAK04 {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/SZTGUI_GYAK04;component/athletedatawindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/SZTGUI_GYAK04;V1.0.0.0;component/athletedatawindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\AthleteDataWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
