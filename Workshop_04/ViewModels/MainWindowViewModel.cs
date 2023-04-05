@@ -36,6 +36,7 @@ namespace SZTGUI_GYAK04.ViewModels
             {
                 SetProperty(ref selectedFromAthletes, value);
                 (AddToAthletesCommand as RelayCommand).NotifyCanExecuteChanged();
+                (ShowCommand as RelayCommand).NotifyCanExecuteChanged();
             }
         }
 
@@ -55,6 +56,7 @@ namespace SZTGUI_GYAK04.ViewModels
         public ICommand AddToAthletesCommand { get; set; }
         public ICommand RemoveFromAthletesCommand { get; set; }
         public ICommand LoadCommand { get; set; }
+        public ICommand ShowCommand { get; set; }
         public static bool IsInDesignMode
         {
             get
@@ -66,7 +68,7 @@ namespace SZTGUI_GYAK04.ViewModels
 
 
         public MainWindowViewModel()
-           : this(IsInDesignMode ? null : Ioc.Default.GetService<IAthleteLogic>())
+        : this(IsInDesignMode ? null : Ioc.Default.GetService<IAthleteLogic>())
         {
 
         }
@@ -89,6 +91,10 @@ namespace SZTGUI_GYAK04.ViewModels
                () => logic.Load(Athletes),
                ()=> SelectedFromAthletes == null
                );
+            ShowCommand = new RelayCommand(
+              () => logic.ShowAthleteData(SelectedFromAthletes),
+              () => SelectedFromAthletes != null
+              );
         }
     }
 }

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 D:\VS_Projects\GUI\Workshop_04\App.xaml
-11407045341
+2-1536152352
 
-10-1059602526
+15-1036674384
 197-1716645675
-MainWindow.xaml;
+AthleteDataWindow.xaml;MainWindow.xaml;
 
-False
+True
 

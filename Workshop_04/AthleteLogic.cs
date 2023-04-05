@@ -5,6 +5,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SZTGUI_GYAK04.Services;
 
 namespace SZTGUI_GYAK04
 {
@@ -13,10 +14,12 @@ namespace SZTGUI_GYAK04
 
         IList<Athlete> athletes;
         IList<Athlete> competition;
+        IAthleteDataService athleteData;
         IMessenger messenger;
-        public AthleteLogic(IMessenger messenger)
+        public AthleteLogic(IMessenger messenger, IAthleteDataService athleteData)
         {
             this.messenger = messenger;
+            this.athleteData = athleteData;
         }
 
         public void SetupCollections(IList<Athlete> athletes, IList<Athlete> competition)
@@ -27,14 +30,21 @@ namespace SZTGUI_GYAK04
 
         public void AddToAthletes(Athlete Athlete)
         {
-            competition.Add(Athlete.GetCopy());
-            messenger.Send("Athlete added", "AthleteInfo");
+            if (Athlete.Permission)
+            {
+                competition.Add(Athlete.GetCopy());
+                messenger.Send("Athlete added", "AthleteInfo");
+            }
         }
 
         public void RemoveFromAthletes(Athlete Athlete)
         {
             competition.Remove(Athlete);
             messenger.Send("Athlete removed", "AthleteInfo");
+        }
+        public void ShowAthleteData(Athlete athlete)
+        {
+            athleteData.ShowData(athlete);
         }
         public void Load(ObservableCollection<Athlete> athletes)
         {

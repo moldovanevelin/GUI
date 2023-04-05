@@ -8,6 +8,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using SZTGUI_GYAK04.Services;
 
 namespace SZTGUI_GYAK04
 {
@@ -21,6 +22,7 @@ namespace SZTGUI_GYAK04
             Ioc.Default.ConfigureServices(
                 new ServiceCollection()
                     .AddSingleton<IAthleteLogic, AthleteLogic>()
+                    .AddSingleton<IAthleteDataService, AthleteDataViaWindow>()
                     .AddSingleton<IMessenger>(WeakReferenceMessenger.Default)
                     .BuildServiceProvider()
                 );

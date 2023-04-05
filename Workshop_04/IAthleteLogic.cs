@@ -9,5 +9,6 @@ namespace SZTGUI_GYAK04
         void RemoveFromAthletes(Athlete Athlete);
         void Load(ObservableCollection<Athlete> Athletes);
         void SetupCollections(IList<Athlete> athletes, IList<Athlete> competition);
+        void ShowAthleteData(Athlete athlete);
     }
 }

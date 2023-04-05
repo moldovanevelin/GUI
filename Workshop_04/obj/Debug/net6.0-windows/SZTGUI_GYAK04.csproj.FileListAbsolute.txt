@@ -53,3 +53,5 @@ D:\VS_Projects\GUI\Workshop_04\obj\Debug\net6.0-windows\refint\SZTGUI_GYAK04.dll
 D:\VS_Projects\GUI\Workshop_04\obj\Debug\net6.0-windows\SZTGUI_GYAK04.pdb
 D:\VS_Projects\GUI\Workshop_04\obj\Debug\net6.0-windows\SZTGUI_GYAK04.genruntimeconfig.cache
 D:\VS_Projects\GUI\Workshop_04\obj\Debug\net6.0-windows\ref\SZTGUI_GYAK04.dll
+D:\VS_Projects\GUI\Workshop_04\obj\Debug\net6.0-windows\AthleteDataWindow.g.cs
+D:\VS_Projects\GUI\Workshop_04\obj\Debug\net6.0-windows\AthleteDataWindow.baml
