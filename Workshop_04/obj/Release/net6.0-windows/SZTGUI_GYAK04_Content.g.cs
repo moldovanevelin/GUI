@@ -8,6 +8,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/antonio%20brown.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/maria%20sharapova.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/sketch.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/sketch1.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/sketch2.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/sketch3.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/sketch5.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/sketch6.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/sketch7.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/sketch_4.jpg")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/venus%20williams.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/kei%20nishikori.jpg")]
 
 

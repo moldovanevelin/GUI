@@ -8,6 +8,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\Antonio Brown.JPG" />
+    <None Remove="Images\Kei Nishikori.JPG" />
+    <None Remove="Images\Maria Sharapova.JPG" />
+    <None Remove="Images\sketch.jpg" />
+    <None Remove="Images\sketch1.JPG" />
+    <None Remove="Images\sketch2.JPG" />
+    <None Remove="Images\sketch3.JPG" />
+    <None Remove="Images\sketch4.jpg" />
+    <None Remove="Images\sketch5.JPG" />
+    <None Remove="Images\sketch6.jpg" />
+    <None Remove="Images\sketch7.jpg" />
+    <None Remove="Images\sketch_4.jpg" />
     <None Remove="Images\Venus Williams.JPG" />
   </ItemGroup>
 
@@ -17,7 +29,43 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Images\Antonio Brown.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Maria Sharapova.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\sketch.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\sketch1.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\sketch2.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\sketch3.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\sketch5.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\sketch6.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\sketch7.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\sketch_4.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\Venus Williams.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Images\Kei Nishikori.JPG">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

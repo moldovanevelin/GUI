@@ -57,3 +57,14 @@ D:\VS_Projects\GUI\Workshop_04\obj\Debug\net6.0-windows\AthleteDataWindow.g.cs
 D:\VS_Projects\GUI\Workshop_04\obj\Debug\net6.0-windows\AthleteDataWindow.baml
 D:\VS_Projects\GUI\Workshop_04\obj\Debug\net6.0-windows\SZTGUI_GYAK04_Content.g.cs
 D:\VS_Projects\GUI\Workshop_04\bin\Debug\net6.0-windows\Images\Venus Williams.JPG
+D:\VS_Projects\GUI\Workshop_04\bin\Debug\net6.0-windows\Images\Antonio Brown.JPG
+D:\VS_Projects\GUI\Workshop_04\bin\Debug\net6.0-windows\Images\Maria Sharapova.JPG
+D:\VS_Projects\GUI\Workshop_04\bin\Debug\net6.0-windows\Images\Kei Nishikori.JPG
+D:\VS_Projects\GUI\Workshop_04\bin\Debug\net6.0-windows\Images\sketch.jpg
+D:\VS_Projects\GUI\Workshop_04\bin\Debug\net6.0-windows\Images\sketch1.JPG
+D:\VS_Projects\GUI\Workshop_04\bin\Debug\net6.0-windows\Images\sketch2.JPG
+D:\VS_Projects\GUI\Workshop_04\bin\Debug\net6.0-windows\Images\sketch3.JPG
+D:\VS_Projects\GUI\Workshop_04\bin\Debug\net6.0-windows\Images\sketch5.JPG
+D:\VS_Projects\GUI\Workshop_04\bin\Debug\net6.0-windows\Images\sketch6.jpg
+D:\VS_Projects\GUI\Workshop_04\bin\Debug\net6.0-windows\Images\sketch7.jpg
+D:\VS_Projects\GUI\Workshop_04\bin\Debug\net6.0-windows\Images\sketch_4.jpg

@@ -14,12 +14,12 @@ namespace SZTGUI_GYAK04
         {            
             if (value.ToString().Contains(" "))
             {                
-                string s = value.ToString().Replace(" ","%20");                ;
-                return s;
+                string s = value.ToString().Replace(" ","%20");
+                return "/Images/"+s + ".jpg";                
             }
             else
             {
-                return value.ToString();
+                return "/Images/" + value.ToString() + ".jpg";
             }
            
         }

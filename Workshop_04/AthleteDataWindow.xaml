@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SZTGUI_GYAK04"
         mc:Ignorable="d"
-        Title="Athlete's Data"  MinHeight="512" MinWidth="800" MaxHeight="512" MaxWidth="800">
+        Title="Athlete's Data"  MinHeight="560" MinWidth="800" MaxHeight="560" MaxWidth="800">
     <Window.Resources>
         <local:BoolConverter x:Key="boolconverter" />
         <local:EscapeUriConverter x:Key="uriConv" />
@@ -13,24 +13,54 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1.5*"/>
         </Grid.ColumnDefinitions>
-        <Image Grid.Column="0" Source="{Binding Actual.Name, Converter={StaticResource uriConv},StringFormat='/Images/{0}.jpg'}" Stretch="UniformToFill"/>
+        <Image Grid.Column="0" Source="{Binding Actual.Name, Converter={StaticResource uriConv}}" Stretch="UniformToFill"/>
         <StackPanel x:Name="stack" Grid.Column="1">
-            <Label Content="Name" Padding="10" Background="LightGreen" FontWeight="Bold" FontFamily="Times New Roman"/>
-            <TextBox Text="{Binding Actual.Name}" Padding="10" IsReadOnly="True" FontWeight="DemiBold" FontFamily="Times New Roman"/>
-            <Label Content="Record" Padding="10" Background="LightGreen" FontWeight="Bold" FontFamily="Times New Roman"/>
-            <TextBox Text="{Binding Actual.Record}" Padding="10" IsReadOnly="True" FontWeight="DemiBold" FontFamily="Times New Roman"/>
-            <Label Content="Record This Year" Padding="10" Background="LightGreen" FontWeight="Bold" FontFamily="Times New Roman"/>
-            <TextBox Text="{Binding Actual.RecordThisYear}" Padding="10" IsReadOnly="True" FontWeight="DemiBold" FontFamily="Times New Roman"/>
-            <Label Content="Permission" Padding="10" Background="LightGreen" FontWeight="Bold" FontFamily="Times New Roman"/>
-            <CheckBox Content="{Binding Actual.Permission, Converter={StaticResource boolconverter}}" IsChecked="{Binding Actual.Permission}" IsEnabled="False" Height="20"/>
-            <Label Content="Association" Padding="10" Background="LightGreen" FontWeight="Bold" FontFamily="Times New Roman"/>
-            <TextBox Text="{Binding Actual.Association}" Padding="10" IsReadOnly="True" FontWeight="DemiBold" FontFamily="Times New Roman"/>
-            <Label Content="Sport" Padding="10" Background="LightGreen" FontWeight="Bold" FontFamily="Times New Roman"/>
-            <TextBox Text="{Binding Actual.Comp_num}" Padding="10" IsReadOnly="True" FontWeight="DemiBold" FontFamily="Times New Roman"/>
-            <Label Content="Actual Value" Padding="10" Background="LightGreen" FontWeight="Bold" FontFamily="Times New Roman"/>
-            <TextBox Text="{Binding Actual.Actual_Value}" Padding="10" IsReadOnly="True" FontWeight="DemiBold" FontFamily="Times New Roman"/>
+            <Label Content="Name" Padding="10" FontWeight="Bold" FontFamily="Times New Roman" FontSize="16">
+                <Label.Background>
+                    <ImageBrush ImageSource="/Images/sketch1.jpg" Opacity="0.5" Stretch="Fill" />
+                </Label.Background>
+            </Label>                  
+            <TextBox Text="{Binding Actual.Name}" Padding="10" FontSize ="14" IsReadOnly="True" FontWeight="DemiBold" FontFamily="Times New Roman" Background="AliceBlue"/>
+            <Label Content="Record" Padding="10" FontWeight="Bold" FontFamily="Times New Roman" FontSize="16">
+                <Label.Background>
+                    <ImageBrush ImageSource="/Images/sketch2.jpg" Opacity="0.5" Stretch="Fill" />
+                </Label.Background>
+            </Label>
+            <TextBox Text="{Binding Actual.Record}" FontSize ="14" Background="AliceBlue" Padding="10" IsReadOnly="True" FontWeight="DemiBold" FontFamily="Times New Roman"/>
+            <Label Content="Record This Year" Padding="10" FontWeight="Bold" FontFamily="Times New Roman" FontSize="16">
+                <Label.Background>
+                    <ImageBrush ImageSource="/Images/sketch3.jpg" Opacity="0.5" Stretch="Fill" />
+                </Label.Background>
+            </Label>
+            <TextBox Text="{Binding Actual.RecordThisYear}" FontSize ="14" Background="AliceBlue" Padding="10" IsReadOnly="True" FontWeight="DemiBold" FontFamily="Times New Roman"/>
+            <Label Content="Permission" Padding="10" FontWeight="Bold" FontFamily="Times New Roman" FontSize="16">
+                <Label.Background>
+                    <ImageBrush ImageSource="/Images/sketch_4.jpg" Opacity="0.5" Stretch="Fill" />
+                </Label.Background>
+            </Label>
+            <Label Background="AliceBlue">
+                <CheckBox FontSize ="14" Content="{Binding Actual.Permission, Converter={StaticResource boolconverter}}" IsChecked="{Binding Actual.Permission}" IsEnabled="False" Height="20"/>
+            </Label>
+            <Label Content="Association" Padding="10" FontWeight="Bold" FontFamily="Times New Roman" FontSize="16">
+                <Label.Background>
+                    <ImageBrush ImageSource="/Images/sketch5.jpg" Opacity="0.5" Stretch="Fill" />
+                </Label.Background>
+            </Label>
+            <TextBox Background="AliceBlue" FontSize ="14" Text="{Binding Actual.Association}" Padding="10" IsReadOnly="True" FontWeight="DemiBold" FontFamily="Times New Roman"/>
+            <Label Content="Sport" Padding="10" FontWeight="Bold" FontFamily="Times New Roman" FontSize="16">
+                <Label.Background>
+                    <ImageBrush ImageSource="/Images/sketch6.jpg" Opacity="0.5" Stretch="Fill" />
+                </Label.Background>
+            </Label>
+            <TextBox Background="AliceBlue" FontSize ="14" Text="{Binding Actual.Comp_num}" Padding="10" IsReadOnly="True" FontWeight="DemiBold" FontFamily="Times New Roman"/>
+            <Label Content="Actual Value" Padding="10" FontWeight="Bold" FontFamily="Times New Roman" FontSize="16">
+                <Label.Background>
+                    <ImageBrush ImageSource="/Images/sketch7.jpg" Opacity="0.5" Stretch="Fill" />
+                </Label.Background>
+            </Label>
+            <TextBox Background="AliceBlue" FontSize ="14" Text="{Binding Actual.Actual_Value}" Padding="10" IsReadOnly="True" FontWeight="DemiBold" FontFamily="Times New Roman"/>
         </StackPanel>               
     </Grid>
 </Window>
