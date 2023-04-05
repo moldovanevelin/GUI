@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "UgXGvyDgCcmu6RqXo12boY3TSoRlOt2mp1H5u1shn+wQF3sZ4nNNUwvLAzK0QZioadFIQm6xr0N7CcN4a7E4rQ==",
+  "dgSpecHash": "OfZEsDpg/diUeKN9uL8f9oqfjBB97Bej+ePNXVedX0ctx0JI7oPPKL4gxahOOHu1BGsCOzyKZdmI09ZHmqOCNg==",
   "success": true,
   "projectFilePath": "D:\\VS_Projects\\GUI\\Workshop_04\\SZTGUI_GYAK04.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\molev\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\molev\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
-    "C:\\Users\\molev\\.nuget\\packages\\microsoft.toolkit.mvvm\\7.1.2\\microsoft.toolkit.mvvm.7.1.2.nupkg.sha512"
+    "C:\\Users\\molev\\.nuget\\packages\\microsoft.toolkit.mvvm\\7.1.2\\microsoft.toolkit.mvvm.7.1.2.nupkg.sha512",
+    "C:\\Users\\molev\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }

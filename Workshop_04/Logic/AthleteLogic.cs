@@ -2,12 +2,16 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using SZTGUI_GYAK04.Helpers;
 using SZTGUI_GYAK04.Models;
 using SZTGUI_GYAK04.Services;
-
 namespace SZTGUI_GYAK04.Logic
 {
     public class AthleteLogic : IAthleteLogic
@@ -46,6 +50,13 @@ namespace SZTGUI_GYAK04.Logic
         public void ShowAthleteData(Athlete athlete)
         {
             athleteData.ShowData(athlete);
+        }
+        public void Save(ObservableCollection<Athlete> competition)
+        {
+            var json = JsonSerializer.Serialize(competition);
+            string userInput = Microsoft.VisualBasic.Interaction.InputBox("Please enter the text in the following format: CompetitionName_date(DDmmYY).json", "User Input", "");
+            File.WriteAllText($"{userInput}", json);
+
         }
         public void Load(ObservableCollection<Athlete> athletes)
         {

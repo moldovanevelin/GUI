@@ -53,12 +53,14 @@ namespace SZTGUI_GYAK04.ViewModels
             {
                 SetProperty(ref selectedFromCompetition, value);
                 (RemoveFromAthletesCommand as RelayCommand).NotifyCanExecuteChanged();
+                (SaveCommand as RelayCommand).NotifyCanExecuteChanged();
             }
         }
         public ICommand AddToAthletesCommand { get; set; }
         public ICommand RemoveFromAthletesCommand { get; set; }
         public ICommand LoadCommand { get; set; }
         public ICommand ShowCommand { get; set; }
+        public ICommand SaveCommand { get; set; }
         public static bool IsInDesignMode
         {
             get
@@ -97,6 +99,10 @@ namespace SZTGUI_GYAK04.ViewModels
               () => logic.ShowAthleteData(SelectedFromAthletes),
               () => SelectedFromAthletes != null
               );
+            SaveCommand = new RelayCommand(
+                () => logic.Save(Competition),
+                () => SelectedFromCompetition != null
+                );
         }
     }
 }

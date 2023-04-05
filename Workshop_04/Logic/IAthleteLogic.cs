@@ -11,5 +11,6 @@ namespace SZTGUI_GYAK04.Logic
         void Load(ObservableCollection<Athlete> Athletes);
         void SetupCollections(IList<Athlete> athletes, IList<Athlete> competition);
         void ShowAthleteData(Athlete athlete);
+        void Save(ObservableCollection<Athlete> athletes);
     }
 }

@@ -5,13 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SZTGUI_GYAK04"
         xmlns:vms="clr-namespace:SZTGUI_GYAK04.ViewModels"
+         xmlns:helpers="clr-namespace:SZTGUI_GYAK04.Helpers"
         mc:Ignorable="d"
         Title="Athletes" Height="450" Width="800">
     <Window.DataContext>
         <vms:MainWindowViewModel/>
     </Window.DataContext>
     <Window.Resources>
-        <local:ColorConverter x:Key="colorconvert" />
+        <helpers:ColorConverter x:Key="colorconvert" />
     </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
@@ -19,6 +20,7 @@
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
+        <!--#region First Column-->
         <ListBox Grid.Column="0" ItemsSource="{Binding Athletes}" SelectedItem="{Binding SelectedFromAthletes}" HorizontalContentAlignment="Stretch">
             <ListBox.ItemTemplate>
                 <DataTemplate>
@@ -28,6 +30,8 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
+        <!--#endregion-->
+        <!--#region Second Column-->
         <ListBox Grid.Column="1" ItemsSource="{Binding Competition}" SelectedItem="{Binding SelectedFromCompetition}" HorizontalContentAlignment="Stretch">
             <ListBox.ItemTemplate>
                 <DataTemplate>
@@ -37,6 +41,8 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
+        <!--#endregion-->
+        <!--#region Third Column-->
         <StackPanel Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center">
             <Button x:Name="button1" Content="Add" Height="40" Width="120"
                     Background="AliceBlue" FontSize="18" FontWeight="Bold"
@@ -50,7 +56,10 @@
             <Button x:Name="button4" Content="Show Data" Height="40" Width="120"
                     Background="AliceBlue" FontSize="18" FontWeight="Bold"  Margin="10"
                     Command="{Binding ShowCommand}"/>
+            <Button x:Name="button5" Content="Save" Height="40" Width="120"
+                    Background="AliceBlue" FontSize="18" FontWeight="Bold"  Margin="10"
+                    Command="{Binding SaveCommand}"/>
         </StackPanel>
-
+        <!--#endregion-->
     </Grid>
 </Window>

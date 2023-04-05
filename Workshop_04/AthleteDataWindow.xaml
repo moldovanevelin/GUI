@@ -4,11 +4,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SZTGUI_GYAK04"
+        xmlns:helpers="clr-namespace:SZTGUI_GYAK04.Helpers"
         mc:Ignorable="d"
         Title="Athlete's Data"  MinHeight="570" MinWidth="800" MaxHeight="570" MaxWidth="800">
     <Window.Resources>
-        <local:BoolConverter x:Key="boolconverter" />
-        <local:EscapeUriConverter x:Key="uriConv" />
+        <helpers:BoolConverter x:Key="boolconverter"/>
+        <helpers:EscapeUriConverter x:Key="uriConv" />
     </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
