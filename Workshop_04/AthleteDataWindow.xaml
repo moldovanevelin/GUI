@@ -20,25 +20,25 @@
         <StackPanel x:Name="stack" Grid.Column="1">
             <Label Content="Name" Padding="10" FontWeight="Bold" FontFamily="Times New Roman" FontSize="16">
                 <Label.Background>
-                    <ImageBrush ImageSource="/Images/sketch1.jpg" Opacity="0.5" Stretch="Fill" />
+                    <ImageBrush ImageSource="/Source/sketch1.jpg" Opacity="0.5" Stretch="Fill" />
                 </Label.Background>
             </Label>                  
             <TextBox Text="{Binding Actual.Name}" Padding="10" FontSize ="14" IsReadOnly="True" FontWeight="DemiBold" FontFamily="Times New Roman" Background="AliceBlue"/>
             <Label Content="Record" Padding="10" FontWeight="Bold" FontFamily="Times New Roman" FontSize="16">
                 <Label.Background>
-                    <ImageBrush ImageSource="/Images/sketch2.jpg" Opacity="0.5" Stretch="Fill" />
+                    <ImageBrush ImageSource="/Source/sketch2.jpg" Opacity="0.5" Stretch="Fill" />
                 </Label.Background>
             </Label>
             <TextBox Text="{Binding Actual.Record}" FontSize ="14" Background="AliceBlue" Padding="10" IsReadOnly="True" FontWeight="DemiBold" FontFamily="Times New Roman"/>
             <Label Content="Record This Year" Padding="10" FontWeight="Bold" FontFamily="Times New Roman" FontSize="16">
                 <Label.Background>
-                    <ImageBrush ImageSource="/Images/sketch3.jpg" Opacity="0.5" Stretch="Fill" />
+                    <ImageBrush ImageSource="/Source/sketch3.jpg" Opacity="0.5" Stretch="Fill" />
                 </Label.Background>
             </Label>
             <TextBox Text="{Binding Actual.RecordThisYear}" FontSize ="14" Background="AliceBlue" Padding="10" IsReadOnly="True" FontWeight="DemiBold" FontFamily="Times New Roman"/>
             <Label Content="Permission" Padding="10" FontWeight="Bold" FontFamily="Times New Roman" FontSize="16">
                 <Label.Background>
-                    <ImageBrush ImageSource="/Images/sketch_4.jpg" Opacity="0.5" Stretch="Fill" />
+                    <ImageBrush ImageSource="/Source/sketch_4.jpg" Opacity="0.5" Stretch="Fill" />
                 </Label.Background>
             </Label>
             <Label Background="AliceBlue">
@@ -46,19 +46,19 @@
             </Label>
             <Label Content="Association" Padding="10" FontWeight="Bold" FontFamily="Times New Roman" FontSize="16">
                 <Label.Background>
-                    <ImageBrush ImageSource="/Images/sketch5.jpg" Opacity="0.5" Stretch="Fill" />
+                    <ImageBrush ImageSource="/Source/sketch5.jpg" Opacity="0.5" Stretch="Fill" />
                 </Label.Background>
             </Label>
             <TextBox Background="AliceBlue" FontSize ="14" Text="{Binding Actual.Association}" Padding="10" IsReadOnly="True" FontWeight="DemiBold" FontFamily="Times New Roman"/>
             <Label Content="Sport" Padding="10" FontWeight="Bold" FontFamily="Times New Roman" FontSize="16">
                 <Label.Background>
-                    <ImageBrush ImageSource="/Images/sketch6.jpg" Opacity="0.5" Stretch="Fill" />
+                    <ImageBrush ImageSource="/Source/sketch6.jpg" Opacity="0.5" Stretch="Fill" />
                 </Label.Background>
             </Label>
             <TextBox Background="AliceBlue" FontSize ="14" Text="{Binding Actual.Comp_num}" Padding="10" IsReadOnly="True" FontWeight="DemiBold" FontFamily="Times New Roman"/>
             <Label Content="Actual Value" Padding="10" FontWeight="Bold" FontFamily="Times New Roman" FontSize="16">
                 <Label.Background>
-                    <ImageBrush ImageSource="/Images/sketch7.jpg" Opacity="0.5" Stretch="Fill" />
+                    <ImageBrush ImageSource="/Source/sketch7.jpg" Opacity="0.5" Stretch="Fill" />
                 </Label.Background>
             </Label>
             <TextBox Background="AliceBlue" FontSize ="14" Text="{Binding Actual.Actual_Value}" Padding="10" IsReadOnly="True" FontWeight="DemiBold" FontFamily="Times New Roman"/>

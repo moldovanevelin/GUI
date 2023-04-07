@@ -69,7 +69,7 @@ namespace SZTGUI_GYAK04 {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/SZTGUI_GYAK04;V1.0.0.0;component/savedatawindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/SZTGUI_GYAK04;component/savedatawindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\SaveDataWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

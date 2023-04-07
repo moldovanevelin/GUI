@@ -5,16 +5,16 @@ winexe
 C#
 .cs
 D:\VS_Projects\GUI\Workshop_04\obj\Debug\net6.0-windows\
-SZTGUI_GYAK04_gjto3uoz_wpftmp
+SZTGUI_GYAK04
 none
 false
-TRACE;RELEASE;NET;NET6_0;NETCOREAPP
+TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 D:\VS_Projects\GUI\Workshop_04\App.xaml
 3-854768596
-12-1222597600
-221866445335
-396400797594
+12881365820
+161967560873
+198-1947084851
 AthleteDataWindow.xaml;MainWindow.xaml;SaveDataWindow.xaml;
 
-True
+False
 

@@ -15,11 +15,11 @@ namespace SZTGUI_GYAK04.Helpers
             if (value.ToString().Contains(" "))
             {
                 string s = value.ToString().Replace(" ", "%20");
-                return "/Images/" + s + ".jpg";
+                return "/Source/" + s + ".jpg";
             }
             else
             {
-                return "/Images/" + value.ToString() + ".jpg";
+                return "/Source/" + value.ToString() + ".jpg";
             }
 
         }

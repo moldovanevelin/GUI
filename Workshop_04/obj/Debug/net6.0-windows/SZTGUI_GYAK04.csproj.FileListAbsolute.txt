@@ -28,18 +28,6 @@ D:\VS_Projects\GUI\SZTGUI_GYAK04\obj\Debug\net6.0-windows\SZTGUI_GYAK04.dll
 D:\VS_Projects\GUI\SZTGUI_GYAK04\obj\Debug\net6.0-windows\refint\SZTGUI_GYAK04.dll
 D:\VS_Projects\GUI\SZTGUI_GYAK04\obj\Debug\net6.0-windows\SZTGUI_GYAK04.pdb
 D:\VS_Projects\GUI\Workshop_04\bin\Debug\net6.0-windows\SZTGUI_GYAK04.exe
-D:\VS_Projects\GUI\Workshop_04\bin\Debug\net6.0-windows\Images\Antonio Brown.JPG
-D:\VS_Projects\GUI\Workshop_04\bin\Debug\net6.0-windows\Images\Maria Sharapova.JPG
-D:\VS_Projects\GUI\Workshop_04\bin\Debug\net6.0-windows\Images\sketch.jpg
-D:\VS_Projects\GUI\Workshop_04\bin\Debug\net6.0-windows\Images\sketch1.JPG
-D:\VS_Projects\GUI\Workshop_04\bin\Debug\net6.0-windows\Images\sketch2.JPG
-D:\VS_Projects\GUI\Workshop_04\bin\Debug\net6.0-windows\Images\sketch3.JPG
-D:\VS_Projects\GUI\Workshop_04\bin\Debug\net6.0-windows\Images\sketch5.JPG
-D:\VS_Projects\GUI\Workshop_04\bin\Debug\net6.0-windows\Images\sketch6.jpg
-D:\VS_Projects\GUI\Workshop_04\bin\Debug\net6.0-windows\Images\sketch7.jpg
-D:\VS_Projects\GUI\Workshop_04\bin\Debug\net6.0-windows\Images\sketch_4.jpg
-D:\VS_Projects\GUI\Workshop_04\bin\Debug\net6.0-windows\Images\Venus Williams.JPG
-D:\VS_Projects\GUI\Workshop_04\bin\Debug\net6.0-windows\Images\Kei Nishikori.JPG
 D:\VS_Projects\GUI\Workshop_04\bin\Debug\net6.0-windows\SZTGUI_GYAK04.deps.json
 D:\VS_Projects\GUI\Workshop_04\bin\Debug\net6.0-windows\SZTGUI_GYAK04.runtimeconfig.json
 D:\VS_Projects\GUI\Workshop_04\bin\Debug\net6.0-windows\SZTGUI_GYAK04.dll
@@ -71,3 +59,15 @@ D:\VS_Projects\GUI\Workshop_04\obj\Debug\net6.0-windows\ref\SZTGUI_GYAK04.dll
 D:\VS_Projects\GUI\Workshop_04\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
 D:\VS_Projects\GUI\Workshop_04\obj\Debug\net6.0-windows\SaveDataWindow.g.cs
 D:\VS_Projects\GUI\Workshop_04\obj\Debug\net6.0-windows\SaveDataWindow.baml
+D:\VS_Projects\GUI\Workshop_04\bin\Debug\net6.0-windows\Source\Antonio Brown.JPG
+D:\VS_Projects\GUI\Workshop_04\bin\Debug\net6.0-windows\Source\Maria Sharapova.JPG
+D:\VS_Projects\GUI\Workshop_04\bin\Debug\net6.0-windows\Source\sketch.jpg
+D:\VS_Projects\GUI\Workshop_04\bin\Debug\net6.0-windows\Source\sketch1.JPG
+D:\VS_Projects\GUI\Workshop_04\bin\Debug\net6.0-windows\Source\sketch2.JPG
+D:\VS_Projects\GUI\Workshop_04\bin\Debug\net6.0-windows\Source\sketch3.JPG
+D:\VS_Projects\GUI\Workshop_04\bin\Debug\net6.0-windows\Source\sketch5.JPG
+D:\VS_Projects\GUI\Workshop_04\bin\Debug\net6.0-windows\Source\sketch6.jpg
+D:\VS_Projects\GUI\Workshop_04\bin\Debug\net6.0-windows\Source\sketch7.jpg
+D:\VS_Projects\GUI\Workshop_04\bin\Debug\net6.0-windows\Source\sketch_4.jpg
+D:\VS_Projects\GUI\Workshop_04\bin\Debug\net6.0-windows\Source\Venus Williams.JPG
+D:\VS_Projects\GUI\Workshop_04\bin\Debug\net6.0-windows\Source\Kei Nishikori.JPG
