@@ -26,9 +26,11 @@ namespace SZTGUI_GYAK04.ViewModels
     /// </summary>
     public class MainWindowViewModel : ObservableRecipient
     {
-        IAthleteLogic logic;
+        IAthleteLogic logic;       
         public ObservableCollection<Athlete> Athletes { get; set; }
         public ObservableCollection<Athlete> Competition { get; set; }
+        public JsonFileName UserInput { get; set; }
+       
         private Athlete selectedFromAthletes;
 
         public Athlete SelectedFromAthletes
@@ -41,8 +43,6 @@ namespace SZTGUI_GYAK04.ViewModels
                 (ShowCommand as RelayCommand).NotifyCanExecuteChanged();
             }
         }
-
-       
         private Athlete selectedFromCompetition;
 
 
@@ -80,8 +80,9 @@ namespace SZTGUI_GYAK04.ViewModels
         {
             this.logic=logic;
             Athletes = new ObservableCollection<Athlete>();
-            Competition = new ObservableCollection<Athlete>();            
-            logic.SetupCollections(Athletes, Competition);
+            Competition = new ObservableCollection<Athlete>();
+            UserInput = new JsonFileName();
+            logic.SetupCollections(Athletes, Competition, UserInput);
             AddToAthletesCommand = new RelayCommand(
                () => logic.AddToAthletes(SelectedFromAthletes),
                () => SelectedFromAthletes != null
@@ -100,7 +101,7 @@ namespace SZTGUI_GYAK04.ViewModels
               () => SelectedFromAthletes != null
               );
             SaveCommand = new RelayCommand(
-                () => logic.Save(Competition),
+                () => logic.Save(JsonFileName.Name),
                 () => SelectedFromCompetition != null
                 );
         }

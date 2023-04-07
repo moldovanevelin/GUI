@@ -9,8 +9,8 @@ namespace SZTGUI_GYAK04.Logic
         void AddToAthletes(Athlete Athlete);
         void RemoveFromAthletes(Athlete Athlete);
         void Load(ObservableCollection<Athlete> Athletes);
-        void SetupCollections(IList<Athlete> athletes, IList<Athlete> competition);
+        void SetupCollections(IList<Athlete> athletes, IList<Athlete> competition, JsonFileName userInput);
         void ShowAthleteData(Athlete athlete);
-        void Save(ObservableCollection<Athlete> athletes);
+        void Save(string userInput);
     }
 }

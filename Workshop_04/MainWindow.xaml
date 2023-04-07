@@ -58,7 +58,7 @@
                     Command="{Binding ShowCommand}"/>
             <Button x:Name="button5" Content="Save" Height="40" Width="120"
                     Background="AliceBlue" FontSize="18" FontWeight="Bold"  Margin="10"
-                    Command="{Binding SaveCommand}"/>
+                    Command="{Binding SaveCommand}" Click="button5_Click"/>
         </StackPanel>
         <!--#endregion-->
     </Grid>

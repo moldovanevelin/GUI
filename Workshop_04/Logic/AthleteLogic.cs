@@ -21,42 +21,51 @@ namespace SZTGUI_GYAK04.Logic
         IList<Athlete> competition;
         IAthleteDataService athleteData;
         IMessenger messenger;
+        JsonFileName userInput;
         public AthleteLogic(IMessenger messenger, IAthleteDataService athleteData)
         {
-            this.messenger = messenger;
+            this.messenger = messenger;            
             this.athleteData = athleteData;
         }
-
-        public void SetupCollections(IList<Athlete> athletes, IList<Athlete> competition)
+        public void SetupCollections(IList<Athlete> athletes, IList<Athlete> competition, JsonFileName userInput)
         {
             this.athletes = athletes;
             this.competition = competition;
+            this.userInput = userInput;
         }
 
-        public void AddToAthletes(Athlete Athlete)
+        public void AddToAthletes(Athlete athlete)
         {
-            if (Athlete.Permission)
+            if (athlete.Permission)
             {
-                competition.Add(Athlete.GetCopy());
+                competition.Add(athlete.GetCopy());
                 messenger.Send("Athlete added", "AthleteInfo");
             }
         }
 
-        public void RemoveFromAthletes(Athlete Athlete)
+        public void RemoveFromAthletes(Athlete athlete)
         {
-            competition.Remove(Athlete);
+            competition.Remove(athlete);
             messenger.Send("Athlete removed", "AthleteInfo");
         }
         public void ShowAthleteData(Athlete athlete)
         {
             athleteData.ShowData(athlete);
         }
-        public void Save(ObservableCollection<Athlete> competition)
+        public void Save(string userInput)
         {
-            var json = JsonSerializer.Serialize(competition);
-            string userInput = Microsoft.VisualBasic.Interaction.InputBox("Please enter the text in the following format: CompetitionName_date(DDmmYY).json", "User Input", "");
-            File.WriteAllText($"{userInput}", json);
-
+            if (userInput == null || !userInput.EndsWith(".json"))
+            {
+                var json = JsonSerializer.Serialize(competition);
+                File.WriteAllText("Comp_040723.json", json);
+                messenger.Send("Competition saved", "CompetitionInfo");
+            }
+            else
+            {
+                var json = JsonSerializer.Serialize(competition);
+                File.WriteAllText($"{userInput}", json);
+                messenger.Send("Competition saved", "CompetitionInfo");
+            }
         }
         public void Load(ObservableCollection<Athlete> athletes)
         {
