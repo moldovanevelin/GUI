@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -42,7 +43,16 @@ namespace SZTGUI_GYAK04.Logic
                 messenger.Send("Athlete added", "AthleteInfo");
             }
         }
-
+        public void Easter()
+        {
+            string url = "https://youtu.be/dQw4w9WgXcQ";
+            ProcessStartInfo psi = new ProcessStartInfo
+            {
+                FileName = url,
+                UseShellExecute = true
+            };
+            Process.Start(psi);
+        }
         public void RemoveFromAthletes(Athlete athlete)
         {
             competition.Remove(athlete);

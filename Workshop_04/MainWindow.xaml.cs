@@ -34,16 +34,5 @@ namespace SZTGUI_GYAK04
             SaveDataWindow sw = new SaveDataWindow();
             sw.ShowDialog();
         }
-
-        private void button6_Click(object sender, RoutedEventArgs e)
-        {
-            string url = "https://youtu.be/dQw4w9WgXcQ";
-            ProcessStartInfo psi = new ProcessStartInfo
-            {
-                FileName = url,
-                UseShellExecute = true
-            };
-            Process.Start(psi);
-        }
     }
 }

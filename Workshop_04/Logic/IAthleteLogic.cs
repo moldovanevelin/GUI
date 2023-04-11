@@ -11,6 +11,7 @@ namespace SZTGUI_GYAK04.Logic
         void Load(ObservableCollection<Athlete> Athletes);
         void SetupCollections(IList<Athlete> athletes, IList<Athlete> competition, JsonFileName userInput);
         void ShowAthleteData(Athlete athlete);
+        void Easter();
         void Save(string userInput);
     }
 }

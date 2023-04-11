@@ -1,9 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Workshop_03\\Workshop_03",
-    "\\Workshop_04"
+    "\\Workshop_04",
+    "\\Workshop_04\\Logic"
   ],
-  "SelectedNode": "\\Workshop_04\\SZTGUI_GYAK04.sln",
+  "SelectedNode": "\\Workshop_04\\Logic\\AthleteLogic.cs",
   "PreviewInSolutionExplorer": false
 }
