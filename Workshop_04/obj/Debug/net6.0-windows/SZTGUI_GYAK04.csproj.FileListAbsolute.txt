@@ -71,3 +71,4 @@ D:\VS_Projects\GUI\Workshop_04\bin\Debug\net6.0-windows\Source\sketch7.jpg
 D:\VS_Projects\GUI\Workshop_04\bin\Debug\net6.0-windows\Source\sketch_4.jpg
 D:\VS_Projects\GUI\Workshop_04\bin\Debug\net6.0-windows\Source\Venus Williams.JPG
 D:\VS_Projects\GUI\Workshop_04\bin\Debug\net6.0-windows\Source\Kei Nishikori.JPG
+D:\VS_Projects\GUI\Workshop_04\bin\Debug\net6.0-windows\Source\Song.wav

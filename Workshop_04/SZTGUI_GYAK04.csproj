@@ -20,6 +20,7 @@
     <None Remove="Source\sketch6.jpg" />
     <None Remove="Source\sketch7.jpg" />
     <None Remove="Source\sketch_4.jpg" />
+    <None Remove="Source\Song.wav" />
     <None Remove="Source\Venus Williams.JPG" />
   </ItemGroup>
 
@@ -58,6 +59,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Source\sketch_4.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Source\Song.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Source\Venus Williams.JPG">

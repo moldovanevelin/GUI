@@ -5,8 +5,12 @@ using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Media;
+using System.Numerics;
+using System.Security.Policy;
 using System.Text;
 using System.Text.Json;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -44,14 +48,17 @@ namespace SZTGUI_GYAK04.Logic
             }
         }
         public void Easter()
-        {
+        {            
             string url = "https://youtu.be/dQw4w9WgXcQ";
             ProcessStartInfo psi = new ProcessStartInfo
             {
                 FileName = url,
                 UseShellExecute = true
             };
-            Process.Start(psi);
+            Process _browserProcess = Process.Start(psi);
+            MainWindow.player.Stop();
+            Thread.Sleep(30000);
+            MainWindow.player.PlayLooping();
         }
         public void RemoveFromAthletes(Athlete athlete)
         {

@@ -18,6 +18,7 @@
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("source/sketch6.jpg")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("source/sketch7.jpg")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("source/sketch_4.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("source/song.wav")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("source/venus%20williams.jpg")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("source/kei%20nishikori.jpg")]
 

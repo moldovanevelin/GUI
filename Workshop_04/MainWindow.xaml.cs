@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -25,9 +26,12 @@ namespace SZTGUI_GYAK04
     /// </summary>
     public partial class MainWindow : Window
     {       
+        public static SoundPlayer player;
         public MainWindow()
         {
-            InitializeComponent();             
+            InitializeComponent();
+            player = new SoundPlayer(@".\Source\Song.wav");
+            player.PlayLooping();    
         }
         private void button5_Click(object sender, RoutedEventArgs e)
         {
