@@ -6,7 +6,7 @@ namespace Workshop_05.Logic
 {
     public class ChatLogic : IChatLogic
     {
-        protected List<Message> _messages = new List<Message>();
+        protected List<Message> _messages=new List<Message>();
         protected List<IClientCallback> _callbacks = new List<IClientCallback>();
 
         public void SendMessage(string messageText)
