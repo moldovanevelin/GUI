@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -9,6 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
+using Workshop_05.Logic;
 using Workshop_05.Services;
 
 namespace Workshop_05
@@ -28,6 +31,7 @@ namespace Workshop_05
             services.AddRazorPages();
             services.AddSignalR();
             services.AddControllers();
+            services.AddScoped<IChatLogic, ChatLogic>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Workshop_05", Version = "v1" });
@@ -40,31 +44,37 @@ namespace Workshop_05
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseSwagger();
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Workshop_05 v1"));
             }
-            else
+            app.UseExceptionHandler(c => c.Run(async context =>
             {
-                app.UseExceptionHandler("/Error");
-            }
+                var exception = context.Features
+                    .Get<IExceptionHandlerPathFeature>()
+                    .Error;
+                var response = new { Msg = exception.Message };
+                await context.Response.WriteAsJsonAsync(response);
+            }));
 
             app.UseStaticFiles();
-            app.UseCors(x => x
-            .AllowCredentials()
-            .AllowAnyMethod()
-            .AllowAnyHeader()
-            .WithOrigins("http://localhost:15880")
-            );
+            //app.UseCors(x => x
+            //.AllowCredentials()
+            //.AllowAnyMethod()
+            //.AllowAnyHeader()
+            //.WithOrigins("http://localhost:15880")
+            //);
 
             app.UseRouting();
-
+           
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllers();
                 endpoints.MapRazorPages();
                 endpoints.MapHub<SignalRHub>("/hub");
             });
-            app.UseSwagger();
-            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json","Workshop_05 v1"));
+           
         }
     }
 }

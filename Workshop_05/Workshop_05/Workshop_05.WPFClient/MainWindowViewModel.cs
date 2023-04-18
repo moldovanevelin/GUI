@@ -12,20 +12,21 @@ using System.Configuration;
 using Microsoft.Toolkit.Mvvm.DependencyInjection;
 using System.ComponentModel;
 using System.Windows;
+using Microsoft.Toolkit.Mvvm.ComponentModel;
 
 namespace Workshop_05.WPFClient
 {
-    public class MainWindowViewModel
+    public class MainWindowViewModel : ObservableRecipient
     {
         IChatLogic logic;
         public RestCollection<Message> Messages { get; set; }
-        private string userInput { get; set; }
+        private string userInput;
         public string UserInput
         {
             get { return userInput; }
             set
             {
-                UserInput = value;
+                SetProperty(ref userInput, value);
                 (SendCommand as RelayCommand).NotifyCanExecuteChanged();
             }
         }
@@ -51,7 +52,7 @@ namespace Workshop_05.WPFClient
             {
             
                 this.logic = logic;
-                Messages = new RestCollection<Message>("http://localhost:15880/", "chat");
+                Messages = new RestCollection<Message>("http://localhost:15880/", "chat", "hub");
                 newMessage.Text = UserInput;
                 SendCommand = new RelayCommand(
                     () => logic.SendMessage(newMessage)                    
