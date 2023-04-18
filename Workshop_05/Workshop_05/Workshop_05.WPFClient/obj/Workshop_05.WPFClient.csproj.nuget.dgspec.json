@@ -39,6 +39,20 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Toolkit.Mvvm": {
+              "target": "Package",
+              "version": "[7.1.2, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -85,6 +99,9 @@
             "projectReferences": {
               "D:\\VS_Projects\\GUI\\Workshop_05\\Workshop_05\\Workshop_05.Model\\Workshop_05.Model.csproj": {
                 "projectPath": "D:\\VS_Projects\\GUI\\Workshop_05\\Workshop_05\\Workshop_05.Model\\Workshop_05.Model.csproj"
+              },
+              "D:\\VS_Projects\\GUI\\Workshop_05\\Workshop_05\\Workshop_05\\Workshop_05.csproj": {
+                "projectPath": "D:\\VS_Projects\\GUI\\Workshop_05\\Workshop_05\\Workshop_05\\Workshop_05.csproj"
               }
             }
           }
@@ -98,6 +115,28 @@
       "frameworks": {
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
+          "dependencies": {
+            "Microsoft.AspNet.WebApi.Client": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
+            "Microsoft.AspNetCore.SignalR.Client": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Toolkit.Mvvm": {
+              "target": "Package",
+              "version": "[7.1.2, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -115,6 +154,86 @@
             },
             "Microsoft.WindowsDesktop.App.WPF": {
               "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\VS_Projects\\GUI\\Workshop_05\\Workshop_05\\Workshop_05\\Workshop_05.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\VS_Projects\\GUI\\Workshop_05\\Workshop_05\\Workshop_05\\Workshop_05.csproj",
+        "projectName": "Workshop_05",
+        "projectPath": "D:\\VS_Projects\\GUI\\Workshop_05\\Workshop_05\\Workshop_05\\Workshop_05.csproj",
+        "packagesPath": "C:\\Users\\molev\\.nuget\\packages\\",
+        "outputPath": "D:\\VS_Projects\\GUI\\Workshop_05\\Workshop_05\\Workshop_05\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\molev\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "D:\\Mindenes\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\VS_Projects\\GUI\\Workshop_05\\Workshop_05\\Workshop_05.Model\\Workshop_05.Model.csproj": {
+                "projectPath": "D:\\VS_Projects\\GUI\\Workshop_05\\Workshop_05\\Workshop_05.Model\\Workshop_05.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.SignalR": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Toolkit.Mvvm": {
+              "target": "Package",
+              "version": "[7.1.2, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"

@@ -1,0 +1,12 @@
+D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.Model\bin\Debug\net5.0\Workshop_05.Model.deps.json
+D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.Model\bin\Debug\net5.0\Workshop_05.Model.dll
+D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.Model\bin\Debug\net5.0\Workshop_05.Model.pdb
+D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.Model\obj\Debug\net5.0\Workshop_05.Model.csproj.AssemblyReference.cache
+D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.Model\obj\Debug\net5.0\Workshop_05.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.Model\obj\Debug\net5.0\Workshop_05.Model.AssemblyInfoInputs.cache
+D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.Model\obj\Debug\net5.0\Workshop_05.Model.AssemblyInfo.cs
+D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.Model\obj\Debug\net5.0\Workshop_05.Model.csproj.CoreCompileInputs.cache
+D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.Model\obj\Debug\net5.0\Workshop_05.Model.dll
+D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.Model\obj\Debug\net5.0\refint\Workshop_05.Model.dll
+D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.Model\obj\Debug\net5.0\Workshop_05.Model.pdb
+D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.Model\obj\Debug\net5.0\ref\Workshop_05.Model.dll
