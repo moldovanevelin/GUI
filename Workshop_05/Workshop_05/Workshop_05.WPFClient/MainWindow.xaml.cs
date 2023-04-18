@@ -22,7 +22,7 @@ namespace Workshop_05.WPFClient
     public partial class MainWindow : Window
     {
         public MainWindow()
-        {
+        {            
             InitializeComponent();
         }
     }

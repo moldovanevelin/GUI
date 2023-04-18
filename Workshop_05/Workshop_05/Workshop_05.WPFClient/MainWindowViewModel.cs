@@ -43,19 +43,20 @@ namespace Workshop_05.WPFClient
         public MainWindowViewModel()
         : this(IsInDesignMode ? null : Ioc.Default.GetService<IChatLogic>())
         {
-
+            
         }
         public MainWindowViewModel(IChatLogic logic)
         {
-            if (!IsInDesignMode)
+            if (IsInDesignMode)
             {
+            
                 this.logic = logic;
                 Messages = new RestCollection<Message>("http://localhost:15880/", "chat");
                 newMessage.Text = UserInput;
                 SendCommand = new RelayCommand(
-                    () => logic.SendMessage(newMessage),
-                    () => newMessage.Text != null
+                    () => logic.SendMessage(newMessage)                    
                     );
+            
             }
         }
         
