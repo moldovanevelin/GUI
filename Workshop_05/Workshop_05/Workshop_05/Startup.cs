@@ -47,6 +47,12 @@ namespace Workshop_05
             }
 
             app.UseStaticFiles();
+            app.UseCors(x => x
+            .AllowCredentials()
+            .AllowAnyMethod()
+            .AllowAnyHeader()
+            .WithOrigins("http://localhost:15880")
+            );
 
             app.UseRouting();
 

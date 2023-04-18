@@ -10,8 +10,7 @@ namespace Workshop_05.Logic
 
         public void SendMessage(Message message)
         {            
-            _messages.Add(message);
-            ;
+            _messages.Add(message);            
             foreach (var callback in _callbacks)
             {
                 callback.ReceiveMessage(message);

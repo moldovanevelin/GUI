@@ -15,20 +15,19 @@ namespace Workshop_05.ChatController
         IHubContext<SignalRHub> hub;
         public ChatController(IChatLogic logic, IHubContext<SignalRHub> hub)
         {
-            this.logic = logic;
+            this.logic = logic;            
             this.hub = hub;
         }
         [HttpGet]
         public List<Message> ReadAll()
         {
-            return logic.GetMessages();
-            
+            return logic.GetMessages();            
         }
 
         [HttpPost]
         public void SendMessage([FromBody] Message message)
         {
-            logic.SendMessage(message);            
+            this.logic.SendMessage(message);            
             this.hub.Clients.All.SendAsync("MessageWritten", message);
         }        
         [HttpPut]
