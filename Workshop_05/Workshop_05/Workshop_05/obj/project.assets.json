@@ -763,6 +763,16 @@
             "related": ".xml"
           }
         }
+      },
+      "Workshop_05.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Workshop_05.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Workshop_05.Model.dll": {}
+        }
       }
     }
   },
@@ -2030,11 +2040,17 @@
         "system.threading.tasks.4.3.0.nupkg.sha512",
         "system.threading.tasks.nuspec"
       ]
+    },
+    "Workshop_05.Model/1.0.0": {
+      "type": "project",
+      "path": "../Workshop_05.Model/Workshop_05.Model.csproj",
+      "msbuildProject": "../Workshop_05.Model/Workshop_05.Model.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "Microsoft.AspNetCore.SignalR >= 1.1.0"
+      "Microsoft.AspNetCore.SignalR >= 1.1.0",
+      "Workshop_05.Model >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2063,7 +2079,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\VS_Projects\\GUI\\Workshop_05\\Workshop_05\\Workshop_05.Model\\Workshop_05.Model.csproj": {
+              "projectPath": "D:\\VS_Projects\\GUI\\Workshop_05\\Workshop_05\\Workshop_05.Model\\Workshop_05.Model.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
