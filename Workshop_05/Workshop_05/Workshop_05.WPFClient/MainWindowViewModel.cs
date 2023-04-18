@@ -21,16 +21,12 @@ namespace Workshop_05.WPFClient
         IChatLogic logic;
         public RestCollection<Message> Messages { get; set; }
         private string userInput;
+
         public string UserInput
         {
             get { return userInput; }
-            set
-            {
-                SetProperty(ref userInput, value);
-                (SendCommand as RelayCommand).NotifyCanExecuteChanged();
-            }
+            set { SetProperty(ref userInput, value); }
         }
-        public Message newMessage = new Message();        
         public ICommand SendCommand { get; set; }
         public static bool IsInDesignMode
         {
@@ -52,12 +48,10 @@ namespace Workshop_05.WPFClient
             {
             
                 this.logic = logic;
-                Messages = new RestCollection<Message>("http://localhost:15880/", "chat", "hub");
-                newMessage.Text = UserInput;
+                Messages = new RestCollection<Message>("http://localhost:15880/", "chat", "hub");                
                 SendCommand = new RelayCommand(
-                    () => logic.SendMessage(newMessage)                    
+                    () => logic.SendMessage(UserInput)                    
                     );
-            
             }
         }
         

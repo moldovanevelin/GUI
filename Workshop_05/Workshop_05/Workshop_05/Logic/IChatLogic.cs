@@ -5,7 +5,7 @@ namespace Workshop_05.Logic
 {
     public interface IChatLogic
     {
-        void SendMessage(Message message);
+        void SendMessage(string message);
         void RegisterCallback(IClientCallback callback);
         void UnregisterCallback(IClientCallback callback);
         List<Message> GetMessages();

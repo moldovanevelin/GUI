@@ -25,7 +25,7 @@ namespace Workshop_05.ChatController
         }
 
         [HttpPost]
-        public void SendMessage([FromBody] Message message)
+        public void SendMessage(string message)
         {
             this.logic.SendMessage(message);            
             this.hub.Clients.All.SendAsync("MessageWritten", message);

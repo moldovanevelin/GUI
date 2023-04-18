@@ -1,15 +1,20 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Workshop_05.Models;
 
 namespace Workshop_05.Logic
 {
     public class ChatLogic : IChatLogic
     {
-        private List<Message> _messages = new List<Message>();
-        private List<IClientCallback> _callbacks = new List<IClientCallback>();
+        protected List<Message> _messages = new List<Message>();
+        protected List<IClientCallback> _callbacks = new List<IClientCallback>();
 
-        public void SendMessage(Message message)
-        {            
+        public void SendMessage(string messageText)
+        { 
+            Message message = new Message();
+            message.Text = messageText;
+            message.Sender = "Sender";
+            message.Date = DateTime.Now;
             _messages.Add(message);            
             foreach (var callback in _callbacks)
             {
