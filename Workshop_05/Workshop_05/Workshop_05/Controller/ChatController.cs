@@ -1,8 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
 using System.Collections.Generic;
-using Workshop_05.Logic;
-using Workshop_05.Models;
+using Workshop_05.Model;
 using Workshop_05.Services;
 
 namespace Workshop_05.ChatController
@@ -10,38 +9,37 @@ namespace Workshop_05.ChatController
     [Route("/[controller]/[action]")]
     [ApiController]
     public class ChatController : ControllerBase
-    {        
-        IChatLogic logic;
+    {               
         IHubContext<SignalRHub> hub;
-        public ChatController(IChatLogic logic, IHubContext<SignalRHub> hub)
-        {
-            this.logic = logic;            
+        List<Message> messages;
+        protected List<ClientCallback> _callbacks = new List<ClientCallback>();
+        public ChatController(IHubContext<SignalRHub> hub, List<Message> messages)
+        {                  
+            this.messages = messages;
             this.hub = hub;
         }
         [HttpGet]
         public List<Message> ReadAll()
         {
-            return logic.GetMessages();            
+            return messages;            
         }
 
         [HttpPost]
-        public void SendMessage(string message)
+        public void SendMessage(Message message)
         {
-            this.logic.SendMessage(message);            
+            this.messages.Add(message);            
             this.hub.Clients.All.SendAsync("MessageWritten", message);
         }        
         [HttpPut]
-        public void RegisterCallback()
+        public void RegisterCallback(ClientCallback callback)
         {
-            var callback = new ClientCallback();
-            logic.RegisterCallback(callback);           
+            _callbacks.Add(callback);
         }
         
         [HttpPut]
-        public void UnregisterCallback()
+        public void UnregisterCallback(ClientCallback callback)
         {
-            var callback = new ClientCallback();
-            logic.UnregisterCallback(callback);            
+            _callbacks.Remove(callback);
         }
     }   
 }

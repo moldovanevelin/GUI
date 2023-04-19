@@ -9,7 +9,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Workshop_05.Model\Workshop_05.Model.csproj" />
-    <ProjectReference Include="..\Workshop_05\Workshop_05.csproj" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.7" />

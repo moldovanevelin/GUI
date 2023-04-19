@@ -11,7 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
-using Workshop_05.Logic;
+using Workshop_05.Model;
 using Workshop_05.Services;
 
 namespace Workshop_05
@@ -27,11 +27,10 @@ namespace Workshop_05
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-        {
-            services.AddRazorPages();
+        {            
             services.AddSignalR();
             services.AddControllers();
-            services.AddScoped<IChatLogic, ChatLogic>();
+            services.AddScoped<List<Message>>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Workshop_05", Version = "v1" });
@@ -55,23 +54,15 @@ namespace Workshop_05
                 var response = new { Msg = exception.Message };
                 await context.Response.WriteAsJsonAsync(response);
             }));
-
-            app.UseStaticFiles();
-            //app.UseCors(x => x
-            //.AllowCredentials()
-            //.AllowAnyMethod()
-            //.AllowAnyHeader()
-            //.WithOrigins("http://localhost:15880")
-            //);
-
+            
+            
             app.UseRouting();
            
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers();
-                endpoints.MapRazorPages();
+                endpoints.MapControllers();                
                 endpoints.MapHub<SignalRHub>("/hub");
             });
            

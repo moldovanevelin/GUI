@@ -3,9 +3,8 @@
     "",
     "\\Workshop_05",
     "\\Workshop_05\\Workshop_05",
-    "\\Workshop_05\\Workshop_05.WPFClient",
-    "\\Workshop_05\\Workshop_05.WPFClient\\Workshop_05.WPFClient"
+    "\\Workshop_05\\Workshop_05\\Workshop_05"
   ],
-  "SelectedNode": "\\Workshop_05\\Workshop_05.WPFClient\\Workshop_05.WPFClient.sln",
+  "SelectedNode": "\\Workshop_05\\Workshop_05\\Workshop_05\\Logic",
   "PreviewInSolutionExplorer": false
 }

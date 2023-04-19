@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Workshop_05.Models;
+using Workshop_05.Model;
 
 namespace Workshop_05.WPFClient
 {
@@ -23,7 +23,8 @@ namespace Workshop_05.WPFClient
     {
         public MainWindow()
         {            
-            InitializeComponent();
+            InitializeComponent();            
         }
+
     }
 }

@@ -20,7 +20,7 @@
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="*"/>                           
+                            <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="1*"/>
@@ -29,11 +29,12 @@
                         <Label Grid.Row="0" Grid.Column="0" Content="{Binding Sender}"/>
                         <Label Grid.Row="0" Grid.Column="1" Content="{Binding Text}"/>
                         <Label Grid.Row="1" Grid.Column="1" Content="{Binding Date}"/>
-                    </Grid>                    
+                    </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <TextBox Grid.Row="1" x:Name="tb_message" Background="AliceBlue"/>
-        <Button Grid.Row="1" Content="Send" VerticalAlignment="Center" HorizontalAlignment="Right" Height="40" Width="60" FontFamily="Times New Roman" FontSize="16" Background="LightSeaGreen" Margin="6"  Command="{Binding SendCommand}"/>
+        <TextBox Grid.Row="1" x:Name="tb_message" Background="AliceBlue" Text="{Binding UserInput,UpdateSourceTrigger=PropertyChanged}" Height="40" Width="700" HorizontalAlignment="Left"/>
+        <Button  Grid.Row="1" Content="Send" Height="40" Width="60" FontFamily="Times New Roman" FontSize="16" Background="LightSeaGreen" Command="{Binding SendCommand}" HorizontalAlignment="Right"/>
+
     </Grid>
 </Window>

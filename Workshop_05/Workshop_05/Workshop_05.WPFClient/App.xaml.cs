@@ -8,7 +8,6 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
-using Workshop_05.Logic;
 
 namespace Workshop_05.WPFClient
 {
@@ -18,13 +17,7 @@ namespace Workshop_05.WPFClient
     public partial class App : Application
     {
         public App()
-        {
-            Ioc.Default.ConfigureServices(
-                new ServiceCollection()
-                    .AddSingleton<IChatLogic, ChatLogic>()                   
-                    .AddSingleton<IMessenger>(WeakReferenceMessenger.Default)
-                    .BuildServiceProvider()
-                );
+        {       
         }
     }
 }
