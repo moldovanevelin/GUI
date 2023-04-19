@@ -19,8 +19,13 @@ D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.WPFClient\bin\Debug\net5.
 D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.WPFClient\bin\Debug\net5.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
 D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.WPFClient\bin\Debug\net5.0-windows\Microsoft.Extensions.Options.dll
 D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.WPFClient\bin\Debug\net5.0-windows\Microsoft.Extensions.Primitives.dll
+D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.WPFClient\bin\Debug\net5.0-windows\Microsoft.OpenApi.dll
+D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.WPFClient\bin\Debug\net5.0-windows\Microsoft.Toolkit.Mvvm.dll
 D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.WPFClient\bin\Debug\net5.0-windows\Newtonsoft.Json.dll
 D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.WPFClient\bin\Debug\net5.0-windows\Newtonsoft.Json.Bson.dll
+D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.WPFClient\bin\Debug\net5.0-windows\Swashbuckle.AspNetCore.Swagger.dll
+D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.WPFClient\bin\Debug\net5.0-windows\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.WPFClient\bin\Debug\net5.0-windows\Swashbuckle.AspNetCore.SwaggerUI.dll
 D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.WPFClient\bin\Debug\net5.0-windows\System.Diagnostics.DiagnosticSource.dll
 D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.WPFClient\bin\Debug\net5.0-windows\System.IO.Pipelines.dll
 D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.WPFClient\bin\Debug\net5.0-windows\System.Runtime.CompilerServices.Unsafe.dll
@@ -32,6 +37,7 @@ D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.WPFClient\bin\Debug\net5.
 D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.WPFClient\obj\Debug\net5.0-windows\Workshop_05.WPFClient.csproj.AssemblyReference.cache
 D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.WPFClient\obj\Debug\net5.0-windows\MainWindow.g.cs
 D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.WPFClient\obj\Debug\net5.0-windows\App.g.cs
+D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.WPFClient\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
 D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.WPFClient\obj\Debug\net5.0-windows\Workshop_05.WPFClient_MarkupCompile.cache
 D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.WPFClient\obj\Debug\net5.0-windows\Workshop_05.WPFClient_MarkupCompile.lref
 D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.WPFClient\obj\Debug\net5.0-windows\MainWindow.baml
@@ -46,9 +52,3 @@ D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.WPFClient\obj\Debug\net5.
 D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.WPFClient\obj\Debug\net5.0-windows\Workshop_05.WPFClient.pdb
 D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.WPFClient\obj\Debug\net5.0-windows\Workshop_05.WPFClient.genruntimeconfig.cache
 D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.WPFClient\obj\Debug\net5.0-windows\ref\Workshop_05.WPFClient.dll
-D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.WPFClient\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
-D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.WPFClient\bin\Debug\net5.0-windows\Microsoft.Toolkit.Mvvm.dll
-D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.WPFClient\bin\Debug\net5.0-windows\Microsoft.OpenApi.dll
-D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.WPFClient\bin\Debug\net5.0-windows\Swashbuckle.AspNetCore.Swagger.dll
-D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.WPFClient\bin\Debug\net5.0-windows\Swashbuckle.AspNetCore.SwaggerGen.dll
-D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.WPFClient\bin\Debug\net5.0-windows\Swashbuckle.AspNetCore.SwaggerUI.dll

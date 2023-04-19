@@ -44,7 +44,7 @@ namespace Workshop_05.WPFClient
         {            
             if (!IsInDesignMode)
             {                
-                Messages = new RestCollection<Message>("http://localhost:15880/", "chat", "hub");                
+                Messages = new RestCollection<Message>("http://localhost:15880/", "Chat", "hub");                
                 SendCommand = new RelayCommand(SendMessage);
             }
             
