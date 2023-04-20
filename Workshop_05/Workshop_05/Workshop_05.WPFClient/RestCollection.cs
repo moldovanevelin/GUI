@@ -6,6 +6,7 @@ using System.Collections.Specialized;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,10 +24,9 @@ namespace Workshop_05.WPFClient
             do
             {
                 isOk = Ping(baseurl + pingableEndpoint);
-            } while (isOk == false);
+            } while (isOk == false);            
             Init(baseurl);
-        }
-
+        }       
         private bool Ping(string url)
         {
             try
@@ -64,8 +64,9 @@ namespace Workshop_05.WPFClient
         {
             List<T> items = new List<T>();
             HttpResponseMessage response = await client.GetAsync(endpoint);
+                    
             if (response.IsSuccessStatusCode)
-            {
+            {                
                 items = await response.Content.ReadAsAsync<List<T>>();
             }
             else

@@ -16,8 +16,9 @@ using Workshop_05.Model;
 namespace Workshop_05.WPFClient
 {
     public class MainWindowViewModel : ObservableRecipient
-    {
+    {        
         public RestCollection<Message> Messages { get; set; }
+        
         private string userInput;
         public string UserInput
         {
@@ -44,14 +45,14 @@ namespace Workshop_05.WPFClient
         {            
             if (!IsInDesignMode)
             {                
-                Messages = new RestCollection<Message>("http://localhost:15880/", "Chat", "hub");                
-                SendCommand = new RelayCommand(SendMessage);
+                Messages = new RestCollection<Message>("http://localhost:15880/", "message/ReadAll", "hub");                
+                SendCommand = new RelayCommand(SendMessage);                
             }
             
         }
         private void SendMessage()
         {
-            Messages.Add(new Message { Sender = "Me", Text = UserInput, Date = DateTime.Now });
+            Messages.Add(new Message { Sender = "Me", Text = UserInput, Date = DateTime.Now });            
             UserInput = string.Empty;
         }
 

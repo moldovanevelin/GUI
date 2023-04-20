@@ -52,3 +52,4 @@ D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.WPFClient\obj\Debug\net5.
 D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.WPFClient\obj\Debug\net5.0-windows\Workshop_05.WPFClient.pdb
 D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.WPFClient\obj\Debug\net5.0-windows\Workshop_05.WPFClient.genruntimeconfig.cache
 D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.WPFClient\obj\Debug\net5.0-windows\ref\Workshop_05.WPFClient.dll
+D:\VS_Projects\GUI\Workshop_05\Workshop_05\Workshop_05.WPFClient\bin\Debug\net5.0-windows\Microsoft.Bcl.AsyncInterfaces.dll

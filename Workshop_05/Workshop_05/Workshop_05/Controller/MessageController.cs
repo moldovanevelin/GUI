@@ -4,16 +4,16 @@ using System.Collections.Generic;
 using Workshop_05.Model;
 using Workshop_05.Services;
 
-namespace Workshop_05.ChatController
+namespace Workshop_05.MessageController
 {
     [Route("/[controller]/[action]")]
     [ApiController]
-    public class ChatController : ControllerBase
+    public class MessageController : ControllerBase
     {               
         IHubContext<SignalRHub> hub;
         List<Message> messages;
         protected List<ClientCallback> _callbacks = new List<ClientCallback>();
-        public ChatController(IHubContext<SignalRHub> hub, List<Message> messages)
+        public MessageController(IHubContext<SignalRHub> hub, List<Message> messages)
         {                  
             this.messages = messages;
             this.hub = hub;
