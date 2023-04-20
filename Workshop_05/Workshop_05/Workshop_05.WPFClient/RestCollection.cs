@@ -63,8 +63,7 @@ namespace Workshop_05.WPFClient
         public async Task<List<T>> GetAsync<T>(string endpoint)
         {
             List<T> items = new List<T>();
-            HttpResponseMessage response = await client.GetAsync(endpoint);
-                    
+            HttpResponseMessage response = await client.GetAsync(endpoint);                    
             if (response.IsSuccessStatusCode)
             {                
                 items = await response.Content.ReadAsAsync<List<T>>();
