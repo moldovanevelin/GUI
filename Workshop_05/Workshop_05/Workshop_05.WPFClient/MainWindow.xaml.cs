@@ -26,17 +26,27 @@ namespace Workshop_05.WPFClient
         {            
             InitializeComponent();
         }
-        private void ShowSmileyTabButton_Click(object sender, RoutedEventArgs e)
-        {
+        private void ShowEmojiTabButton_Click(object sender, RoutedEventArgs e)
+        {          
+            ScrollViewer.Visibility= Visibility.Visible;
             tabControl.Visibility = Visibility.Visible;
+            
         }
-        private void SmileyButton_Click(object sender, RoutedEventArgs e)
+        private void EmojiButton_Click(object sender, RoutedEventArgs e)
         {
             Button clickedButton = sender as Button;            
             tb_message.Text += clickedButton.Content.ToString();
             BindingExpression binding = tb_message.GetBindingExpression(TextBox.TextProperty);
             binding.UpdateSource();
             tabControl.Visibility = Visibility.Collapsed;
+            ScrollViewer.Visibility = Visibility.Collapsed;
+        }
+
+        private void tabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var selectedTab = tabControl.SelectedItem as TabItem;            
+            var selectedButton = selectedTab.Content as Button;
+            tb_message.Foreground = selectedButton.Foreground;            
         }
     }
 }

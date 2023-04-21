@@ -37,30 +37,80 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <TextBox Grid.Column="0" x:Name="tb_message" Background="AliceBlue" Text="{Binding NewMessage.Text}" Height="40" Width="950" HorizontalAlignment="Left" Margin="10"/>
-            <Button Grid.Column="1" Content="😊" Click="ShowSmileyTabButton_Click" Height="40" Width="60" FontFamily="Times New Roman" FontSize="16" Background="LightSeaGreen"/>
-            <ScrollViewer VerticalScrollBarVisibility="Auto" CanContentScroll="True">
-                <TabControl x:Name="tabControl" Visibility="Collapsed" Grid.Column="1" Width="48">
-                    <TabItem Header="Smiley">                       
-                             <WrapPanel Width="48">
-                                  <Button Content="😊" Background="AliceBlue" Click="SmileyButton_Click" FontSize="16"/>
-                                  <Button Content="😎" Background="AliceBlue" Click="SmileyButton_Click" FontSize="16"/>
-                                  <Button Content="😍" Background="AliceBlue" Click="SmileyButton_Click" FontSize="16"/>
-                                  <Button Content="😂" Background="AliceBlue" Click="SmileyButton_Click" FontSize="16"/>
-                                  <Button Content="😈" Background="AliceBlue" Click="SmileyButton_Click" FontSize="16"/>
-                                  <Button Content="😨" Background="AliceBlue" Click="SmileyButton_Click" FontSize="16"/>
-                                  <Button Content="😢" Background="AliceBlue" Click="SmileyButton_Click" FontSize="16"/>
-                                  <Button Content="😴" Background="AliceBlue" Click="SmileyButton_Click" FontSize="16"/>
-                                  <Button Content="😖" Background="AliceBlue" Click="SmileyButton_Click" FontSize="16"/>
-                                  <Button Content="😋" Background="AliceBlue" Click="SmileyButton_Click" FontSize="16"/>
-                                  <Button Content="😕" Background="AliceBlue" Click="SmileyButton_Click" FontSize="16"/>
-                             </WrapPanel>
-                        
+            <Grid Grid.Column="1">
+                <Button Grid.Column="1" Content="😊" Click="ShowEmojiTabButton_Click" Height="40" Width="60" FontFamily="Times New Roman" FontSize="16" Background="LightSeaGreen" Margin="10"/>
+                <ScrollViewer x:Name="ScrollViewer" Visibility="Collapsed" CanContentScroll="True" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Grid.Column="1">
+                    <TabControl x:Name="tabControl" Visibility="Collapsed">
+                        <TabItem Header="😊" Foreground="YellowGreen">
+                        <WrapPanel  Width="120">
+                            <Button Content="😊" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="PaleVioletRed"/>
+                            <Button Content="😎" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="YellowGreen"/>
+                            <Button Content="😍" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="IndianRed"/>
+                            <Button Content="😂" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="YellowGreen"/>
+                            <Button Content="😈" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="DarkRed"/>
+                            <Button Content="😨" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="Blue"/>
+                            <Button Content="😢" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="YellowGreen"/>
+                            <Button Content="😴" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="CadetBlue"/>
+                            <Button Content="😖" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="MediumVioletRed"/>
+                            <Button Content="😋" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="PaleVioletRed"/>
+                            <Button Content="😕" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="GreenYellow"/>
+                            <Button Content="😀" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="YellowGreen"/>
+                            <Button Content="😁" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="PaleVioletRed"/>
+                            <Button Content="😜" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="PaleVioletRed"/>
+                            <Button Content="🤣" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="Red"/>
+                            <Button Content="😇" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="MediumBlue"/>
+                            <Button Content="🤔" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="GreenYellow"/>
+                            <Button Content="🤨" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="Red"/>
+                            <Button Content="🙄" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="PaleVioletRed"/>
+                            <Button Content="😒" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="ForestGreen"/>
+                            <Button Content="😛" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="Red"/>
+                            <Button Content="😘" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="DarkRed"/>
+                            <Button Content="😗" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="DeepPink"/>
+                            <Button Content="😙" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="HotPink"/>
+                            <Button Content="😚" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="GreenYellow"/>
+                            <Button Content="😳" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="CornflowerBlue"/>
+                            <Button Content="😭" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="CornflowerBlue"/>
+                            <Button Content="😤" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="Red"/>
+                        </WrapPanel>
                     </TabItem>
-                </TabControl>
-            </ScrollViewer>
+                        <TabItem Header="🐶" Foreground="Brown">
+                            <WrapPanel  Width="120">
+                                <Button Content="🐶" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="Brown"/>
+                                <Button Content="🐱" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="Yellow"/>
+                                <Button Content="🐭" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="Gray"/>
+                                <Button Content="🐹" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="DarkOrange"/>
+                                <Button Content="🐰" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="Gray"/>
+                                <Button Content="🐻" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="Brown"/>
+                                <Button Content="🐼" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="Black"/>
+                                <Button Content="🦁" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="OrangeRed"/>
+                                <Button Content="🐳" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="DarkBlue"/>
+                                <Button Content="🦈" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="DeepSkyBlue"/>
+                                <Button Content="🐪" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="Chocolate"/>
+                                <Button Content="🦏" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="Gray"/>
+                                <Button Content="🐙" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="DeepPink"/>
+                                <Button Content="🐍" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="Green"/>
+                            </WrapPanel>
+                        </TabItem>
+                        <TabItem Header="🍕" Foreground="SandyBrown">
+                            <WrapPanel  Width="120">
+                                <Button Content="🍔" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="Brown"/>
+                                <Button Content="🍟" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="SandyBrown"/>
+                                <Button Content="🍕" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="SandyBrown"/>
+                                <Button Content="🌭" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="Red"/>
+                                <Button Content="🌮" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="YellowGreen"/>
+                                <Button Content="🍩" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="DeepPink"/>
+                                <Button Content="🍪" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="Yellow"/>
+                                <Button Content="🍰" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="HotPink"/>
+                                <Button Content="🍦" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="Brown"/>
+                                <Button Content="🍭" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="Red"/>
+                                <Button Content="🍫" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="SaddleBrown"/>
+                                <Button Content="🥤" Background="AliceBlue" Click="EmojiButton_Click" FontSize="16" Foreground="Red"/>
+                            </WrapPanel>
+                        </TabItem>
+                    </TabControl>
+            </ScrollViewer>            
+            </Grid>
             <Button Grid.Column="2" Content="Send" Margin="10" Height="40" Width="60" FontFamily="Times New Roman" FontSize="16" Background="LightSeaGreen" Command="{Binding SendCommand}" HorizontalAlignment="Right"/>
-        </Grid>
-        
-
+        </Grid>       
     </Grid>
 </Window>
