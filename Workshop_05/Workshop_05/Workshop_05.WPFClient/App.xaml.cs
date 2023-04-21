@@ -18,6 +18,6 @@ namespace Workshop_05.WPFClient
     {
         public App()
         {       
-        }
+        }       
     }
 }

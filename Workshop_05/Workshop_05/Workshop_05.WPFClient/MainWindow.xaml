@@ -5,35 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Workshop_05.WPFClient"
         mc:Ignorable="d"
-        Title="Let's chat!" Height="450" Width="800">
+        Title="Let's chat!" MinHeight="600" MinWidth="1000">
     <Window.DataContext>
         <local:MainWindowViewModel/>
     </Window.DataContext>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="8*"/>
+            <RowDefinition Height="3*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        <ListBox x:Name="lb_messages" ItemsSource="{Binding Messages}">
+        <ListBox x:Name="lb_messages" Grid.Row="0" ItemsSource="{Binding WindowMessages, UpdateSourceTrigger=PropertyChanged}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>
                         <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
                             <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="2*"/>
                         </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="1*"/>
-                            <RowDefinition Height="1*"/>
-                        </Grid.RowDefinitions>
-                        <Label Grid.Row="0" Grid.Column="0" Content="{Binding Sender}"/>
-                        <Label Grid.Row="0" Grid.Column="1" Content="{Binding Text}"/>
-                        <Label Grid.Row="1" Grid.Column="1" Content="{Binding Date}"/>
+                        <Label Grid.Column="0" Content="{Binding Sender}" FontFamily="Times New Roman" FontSize="14" FontWeight="DemiBold"/>
+                        <Label Grid.Column="1" Content="{Binding Text}" FontFamily="Times New Roman" FontSize="14"/>
+                        <Label Grid.Column="2" Content="{Binding Date}" FontFamily="Times New Roman" FontSize="12" FontStyle="Italic" HorizontalAlignment="Right"/>
                     </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <TextBox Grid.Row="1" x:Name="tb_message" Background="AliceBlue" Text="{Binding UserInput,UpdateSourceTrigger=PropertyChanged}" Height="40" Width="700" HorizontalAlignment="Left"/>
+        <TextBox Grid.Row="1" x:Name="tb_message" Background="AliceBlue" Text="{Binding NewMessage.Text}" Height="40" Width="940" HorizontalAlignment="Left" Margin="0,53,0,53"/>
         <Button  Grid.Row="1" Content="Send" Height="40" Width="60" FontFamily="Times New Roman" FontSize="16" Background="LightSeaGreen" Command="{Binding SendCommand}" HorizontalAlignment="Right"/>
 
     </Grid>

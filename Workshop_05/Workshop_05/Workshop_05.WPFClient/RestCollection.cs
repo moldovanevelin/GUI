@@ -347,9 +347,9 @@ namespace Workshop_05.WPFClient
         }
 
         public void Add(T item)
-        {
+        {            
             if (hasSignalR)
-            {
+            {                
                 this.rest.PostAsync(item, typeof(T).Name);
             }
             else

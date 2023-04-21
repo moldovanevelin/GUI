@@ -12,26 +12,35 @@ using System.ComponentModel;
 using System.Windows;
 using Microsoft.Toolkit.Mvvm.ComponentModel;
 using Workshop_05.Model;
+using System.Collections.Specialized;
+using System.Runtime.CompilerServices;
+using System.Numerics;
+using System.Windows.Data;
 
 namespace Workshop_05.WPFClient
 {
     public class MainWindowViewModel : ObservableRecipient
-    {        
-        public RestCollection<Message> Messages { get; set; }
+    {
+        public RestCollection<Message> Messages { get; set; }       
+        public List<Message> WindowMessages { get; set; }
         
-        private string userInput;
-        public string UserInput
+        private Message newMessage;
+        public Message NewMessage
         {
-            get { return userInput; }
+            get { return newMessage; }
             set
             {
-                if (userInput != value)
+                if (value != null)
                 {
-                    userInput = value;
-                    OnPropertyChanged(nameof(UserInput));
+                    newMessage = new Message()
+                    {
+                        Text = value.Text
+                    };
+                    OnPropertyChanged();                   
                 }
             }
         }
+
         public ICommand SendCommand { get; set; }
         public static bool IsInDesignMode
         {
@@ -42,18 +51,22 @@ namespace Workshop_05.WPFClient
             }
         }
         public MainWindowViewModel()
-        {            
+        {
             if (!IsInDesignMode)
-            {                
-                Messages = new RestCollection<Message>("http://localhost:15880/", "message", "hub");                
-                SendCommand = new RelayCommand(SendMessage);                
+            {
+                Messages = new RestCollection<Message>("http://localhost:15880/", "message", "hub");     
+                WindowMessages = new List<Message>();
+                WindowMessages.AddRange(Messages);
+                NewMessage = new Message();
+                SendCommand = new RelayCommand(() =>
+                {
+                    Messages.Add(new Message() { Text= NewMessage.Text });                    
+                    WindowMessages.Add(new Message() { Text = NewMessage.Text });  
+                    OnPropertyChanged(nameof(WindowMessages));
+                    NewMessage = new Message() { Text = string.Empty };
+                });                
             }
             
-        }
-        private void SendMessage()
-        {
-            Messages.Add(new Message { Sender = "Me", Text = UserInput, Date = DateTime.Now });            
-            UserInput = string.Empty;
         }
 
     }

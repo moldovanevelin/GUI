@@ -23,7 +23,7 @@ namespace Workshop_05.WPFClient
     {
         public MainWindow()
         {            
-            InitializeComponent();            
+            InitializeComponent();
         }
 
     }
