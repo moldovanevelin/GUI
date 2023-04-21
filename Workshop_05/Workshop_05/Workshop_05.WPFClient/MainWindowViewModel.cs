@@ -58,11 +58,11 @@ namespace Workshop_05.WPFClient
             {
                 Messages = new RestCollection<Message>("http://localhost:15880/", "message", "hub")
                         {
-                            new Message() { Text = "Welcome to the chat Window! It was a pain in the 4ss to make it, so appreciate it!😨" },
+                            new Message() { Text = "Welcome to the chat Window! It was a pain in the 4ss to make it, so appreciate it!😨" }
                         };
                 NewMessage = new Message();
                 SendCommand = new RelayCommand(() =>
-                {
+                {                   
                     if (newMessage!=null && NewMessage.Text!=string.Empty)
                     {                        
                         Messages = new RestCollection<Message>("http://localhost:15880/", "message", "hub")
