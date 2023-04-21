@@ -16,14 +16,16 @@ using System.Collections.Specialized;
 using System.Runtime.CompilerServices;
 using System.Numerics;
 using System.Windows.Data;
+using Microsoft.AspNetCore.SignalR;
+using System.Windows.Controls;
+using System.Reflection;
 
 namespace Workshop_05.WPFClient
 {
     public class MainWindowViewModel : ObservableRecipient
     {
-        public RestCollection<Message> Messages { get; set; }       
-        public List<Message> WindowMessages { get; set; }
-        
+        public RestCollection<Message> Messages { get { return new RestCollection<Message>("http://localhost:15880/", "message", "hub"); } set { OnPropertyChanged(); } }       
+       
         private Message newMessage;
         public Message NewMessage
         {
@@ -41,7 +43,7 @@ namespace Workshop_05.WPFClient
             }
         }
 
-        public ICommand SendCommand { get; set; }
+        public ICommand SendCommand { get; set; }         
         public static bool IsInDesignMode
         {
             get
@@ -54,17 +56,23 @@ namespace Workshop_05.WPFClient
         {
             if (!IsInDesignMode)
             {
-                Messages = new RestCollection<Message>("http://localhost:15880/", "message", "hub");     
-                WindowMessages = new List<Message>();
-                WindowMessages.AddRange(Messages);
+                Messages = new RestCollection<Message>("http://localhost:15880/", "message", "hub")
+                        {
+                            new Message() { Text = "Welcome to the chat Window! It was a pain in the 4ss to make it, so appreciate it!😨" },
+                        };
                 NewMessage = new Message();
                 SendCommand = new RelayCommand(() =>
                 {
-                    Messages.Add(new Message() { Text= NewMessage.Text });                    
-                    WindowMessages.Add(new Message() { Text = NewMessage.Text });  
-                    OnPropertyChanged(nameof(WindowMessages));
+                    if (newMessage!=null && NewMessage.Text!=string.Empty)
+                    {                        
+                        Messages = new RestCollection<Message>("http://localhost:15880/", "message", "hub")
+                        {
+                            new Message() { Sender="Me:", Text = NewMessage.Text },                         
+                        };
+                        OnPropertyChanged(nameof(Messages));
+                    }
                     NewMessage = new Message() { Text = string.Empty };
-                });                
+                });               
             }
             
         }

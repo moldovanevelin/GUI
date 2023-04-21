@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,6 +26,17 @@ namespace Workshop_05.WPFClient
         {            
             InitializeComponent();
         }
-
+        private void ShowSmileyTabButton_Click(object sender, RoutedEventArgs e)
+        {
+            tabControl.Visibility = Visibility.Visible;
+        }
+        private void SmileyButton_Click(object sender, RoutedEventArgs e)
+        {
+            Button clickedButton = sender as Button;            
+            tb_message.Text += clickedButton.Content.ToString();
+            BindingExpression binding = tb_message.GetBindingExpression(TextBox.TextProperty);
+            binding.UpdateSource();
+            tabControl.Visibility = Visibility.Collapsed;
+        }
     }
 }

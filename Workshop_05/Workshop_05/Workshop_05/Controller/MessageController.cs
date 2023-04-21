@@ -21,7 +21,7 @@ namespace Workshop_05.MessageController
         }
         [HttpGet]
         public List<Message> ReadAll()
-        {                       
+        {            
             return messages;            
         }
         [HttpPost]

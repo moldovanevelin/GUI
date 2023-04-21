@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Workshop_05.WPFClient"
         mc:Ignorable="d"
-        Title="Let's chat!" MinHeight="600" MinWidth="1000">
+        Title="Let's chat!" MinHeight="450" MinWidth="800" ResizeMode="NoResize">
     <Window.DataContext>
         <local:MainWindowViewModel/>
     </Window.DataContext>
@@ -14,7 +14,7 @@
             <RowDefinition Height="3*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        <ListBox x:Name="lb_messages" Grid.Row="0" ItemsSource="{Binding WindowMessages, UpdateSourceTrigger=PropertyChanged}">
+        <ListBox x:Name="lb_messages" Grid.Row="0" ItemsSource="{Binding Messages}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>
@@ -30,8 +30,37 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <TextBox Grid.Row="1" x:Name="tb_message" Background="AliceBlue" Text="{Binding NewMessage.Text}" Height="40" Width="940" HorizontalAlignment="Left" Margin="0,53,0,53"/>
-        <Button  Grid.Row="1" Content="Send" Height="40" Width="60" FontFamily="Times New Roman" FontSize="16" Background="LightSeaGreen" Command="{Binding SendCommand}" HorizontalAlignment="Right"/>
+        <Grid Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBox Grid.Column="0" x:Name="tb_message" Background="AliceBlue" Text="{Binding NewMessage.Text}" Height="40" Width="950" HorizontalAlignment="Left" Margin="10"/>
+            <Button Grid.Column="1" Content="😊" Click="ShowSmileyTabButton_Click" Height="40" Width="60" FontFamily="Times New Roman" FontSize="16" Background="LightSeaGreen"/>
+            <ScrollViewer VerticalScrollBarVisibility="Auto" CanContentScroll="True">
+                <TabControl x:Name="tabControl" Visibility="Collapsed" Grid.Column="1" Width="48">
+                    <TabItem Header="Smiley">                       
+                             <WrapPanel Width="48">
+                                  <Button Content="😊" Background="AliceBlue" Click="SmileyButton_Click" FontSize="16"/>
+                                  <Button Content="😎" Background="AliceBlue" Click="SmileyButton_Click" FontSize="16"/>
+                                  <Button Content="😍" Background="AliceBlue" Click="SmileyButton_Click" FontSize="16"/>
+                                  <Button Content="😂" Background="AliceBlue" Click="SmileyButton_Click" FontSize="16"/>
+                                  <Button Content="😈" Background="AliceBlue" Click="SmileyButton_Click" FontSize="16"/>
+                                  <Button Content="😨" Background="AliceBlue" Click="SmileyButton_Click" FontSize="16"/>
+                                  <Button Content="😢" Background="AliceBlue" Click="SmileyButton_Click" FontSize="16"/>
+                                  <Button Content="😴" Background="AliceBlue" Click="SmileyButton_Click" FontSize="16"/>
+                                  <Button Content="😖" Background="AliceBlue" Click="SmileyButton_Click" FontSize="16"/>
+                                  <Button Content="😋" Background="AliceBlue" Click="SmileyButton_Click" FontSize="16"/>
+                                  <Button Content="😕" Background="AliceBlue" Click="SmileyButton_Click" FontSize="16"/>
+                             </WrapPanel>
+                        
+                    </TabItem>
+                </TabControl>
+            </ScrollViewer>
+            <Button Grid.Column="2" Content="Send" Margin="10" Height="40" Width="60" FontFamily="Times New Roman" FontSize="16" Background="LightSeaGreen" Command="{Binding SendCommand}" HorizontalAlignment="Right"/>
+        </Grid>
+        
 
     </Grid>
 </Window>
