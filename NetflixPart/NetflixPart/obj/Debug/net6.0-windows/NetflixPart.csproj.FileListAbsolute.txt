@@ -24,3 +24,5 @@ D:\VS_Projects\GUI\NetflixPart\NetflixPart\bin\Debug\net6.0-windows\Microsoft.Ex
 D:\VS_Projects\GUI\NetflixPart\NetflixPart\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 D:\VS_Projects\GUI\NetflixPart\NetflixPart\bin\Debug\net6.0-windows\Microsoft.Toolkit.Mvvm.dll
 D:\VS_Projects\GUI\NetflixPart\NetflixPart\obj\Debug\net6.0-windows\NetflixPart.csproj.CopyComplete
+D:\VS_Projects\GUI\NetflixPart\NetflixPart\obj\Debug\net6.0-windows\MovieDataWindow.g.cs
+D:\VS_Projects\GUI\NetflixPart\NetflixPart\obj\Debug\net6.0-windows\MovieDataWindow.baml

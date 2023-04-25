@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 D:\VS_Projects\GUI\NetflixPart\NetflixPart\App.xaml
-11407045341
+21440008427
 
-9161058936
+11523657745
 197-108615025
-MainWindow.xaml;
+MainWindow.xaml;MovieDataWindow.xaml;
 
 False
 

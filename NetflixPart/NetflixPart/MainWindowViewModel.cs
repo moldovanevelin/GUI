@@ -27,10 +27,12 @@ namespace NetflixPart
             {
                 SetProperty(ref selectedFromMovies, value);
                 (AddCommand as RelayCommand).NotifyCanExecuteChanged();
+                (ShowCommand as RelayCommand).NotifyCanExecuteChanged();
             }
         }
         public ICommand LoadCommand { get; set; }
         public ICommand AddCommand { get; set; }
+        public ICommand ShowCommand { get; set; }
         public static bool IsInDesignMode
         {
             get
@@ -57,6 +59,10 @@ namespace NetflixPart
             LoadCommand = new RelayCommand(
                 ()=> logic.GenerateMovies(),
                 ()=> SelectedFromMovies == null
+                );
+            ShowCommand = new RelayCommand(
+                () => new MovieDataWindow(SelectedFromMovies).ShowDialog(),
+                () => SelectedFromMovies != null
                 );
             
         }

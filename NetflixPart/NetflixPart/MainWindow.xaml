@@ -37,9 +37,10 @@
         <!--#endregion-->
         
         <!--#region Middle Column-->
-        <StackPanel Grid.Column="1">
-            <Button Content="Load Movies" Width="120" Height="40" Margin="10" Background="AliceBlue" FontFamily="Times New Roman" FontSize="16" Command="{Binding LoadCommand}"/>
-            <Button Content="Add Movies" Width="120" Height="40" Margin="10" Background="AliceBlue" FontFamily="Times New Roman" FontSize="16" Command="{Binding AddCommand}"/>
+        <StackPanel Grid.Column="1" VerticalAlignment="Center">
+            <Button Content="Load Movies" Width="140" Height="40" Margin="10" Background="AliceBlue" FontFamily="Times New Roman" FontSize="16" Command="{Binding LoadCommand}"/>
+            <Button Content="Add Movies" Width="140" Height="40" Margin="10" Background="AliceBlue" FontFamily="Times New Roman" FontSize="16" Command="{Binding AddCommand}"/>
+            <Button Content="Show Movie's Data" Width="140" Height="40" Margin="10" Background="AliceBlue" FontFamily="Times New Roman" FontSize="16" Command="{Binding ShowCommand}"/>
         </StackPanel>
         <!--#endregion-->
         
