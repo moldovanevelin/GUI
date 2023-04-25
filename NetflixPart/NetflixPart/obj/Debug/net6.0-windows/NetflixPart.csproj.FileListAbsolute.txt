@@ -28,3 +28,7 @@ D:\VS_Projects\GUI\NetflixPart\NetflixPart\obj\Debug\net6.0-windows\MovieDataWin
 D:\VS_Projects\GUI\NetflixPart\NetflixPart\obj\Debug\net6.0-windows\MovieDataWindow.baml
 D:\VS_Projects\GUI\NetflixPart\NetflixPart\obj\Debug\net6.0-windows\NetflixPart_Content.g.cs
 D:\VS_Projects\GUI\NetflixPart\NetflixPart\bin\Debug\net6.0-windows\Source\Harry Potter and the Philosopher's Stone.jpg
+D:\VS_Projects\GUI\NetflixPart\NetflixPart\bin\Debug\net6.0-windows\Source\Memento.jpg
+D:\VS_Projects\GUI\NetflixPart\NetflixPart\bin\Debug\net6.0-windows\Source\Old.jpg
+D:\VS_Projects\GUI\NetflixPart\NetflixPart\bin\Debug\net6.0-windows\Source\The Godfather.jpg
+D:\VS_Projects\GUI\NetflixPart\NetflixPart\bin\Debug\net6.0-windows\Source\The Truman Show.jpg

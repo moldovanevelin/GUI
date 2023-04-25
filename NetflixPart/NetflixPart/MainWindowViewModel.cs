@@ -81,7 +81,7 @@ namespace NetflixPart
                 ()=> SelectedFromMovies == null
                 );
             ShowCommand = new RelayCommand(
-                () => new MovieDataWindow(SelectedFromMovies).ShowDialog(),
+                () => logic.ShowMovieData(SelectedFromMovies),
                 () => SelectedFromMovies != null
                 ); 
             

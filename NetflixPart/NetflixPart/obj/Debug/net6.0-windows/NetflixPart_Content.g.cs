@@ -9,5 +9,9 @@
 //------------------------------------------------------------------------------
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("source/harry%20potter%20and%20the%20philosopher\'s%20stone.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("source/memento.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("source/old.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("source/the%20godfather.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("source/the%20truman%20show.jpg")]
 
 

@@ -20,6 +20,7 @@ namespace NetflixPart
             Ioc.Default.ConfigureServices(            
                 new ServiceCollection()
                     .AddSingleton<IMovieLogic, MovieLogic>()
+                    .AddSingleton<IMovieDataService, MovieDataViaWindow>()
                     .BuildServiceProvider()
                 );             
         }

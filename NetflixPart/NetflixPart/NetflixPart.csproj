@@ -9,10 +9,27 @@
 
   <ItemGroup>
     <None Remove="Harry Potter and the Philosopher's Stone .jpg" />
+    <None Remove="Source\Harry Potter and the Philosopher%27s Stone.jpg" />
+    <None Remove="Source\Memento.jpg" />
+    <None Remove="Source\Old.jpg" />
+    <None Remove="Source\The Godfather.jpg" />
+    <None Remove="Source\The Truman Show.jpg" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Source\Harry Potter and the Philosopher%27s Stone.jpg">
+    <Content Include="Source\Harry Potter and the Philosopher's Stone.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Source\Memento.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Source\Old.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Source\The Godfather.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Source\The Truman Show.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
