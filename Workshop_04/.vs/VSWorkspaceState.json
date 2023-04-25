@@ -5,6 +5,6 @@
     "\\Models",
     "\\ViewModels"
   ],
-  "SelectedNode": "\\MainWindow.xaml.cs",
+  "SelectedNode": "\\ViewModels\\MainWindowViewModel.cs",
   "PreviewInSolutionExplorer": false
 }
