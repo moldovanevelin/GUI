@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "VR/u0eLyNo7SR9PaAWOZb2NsyBpIJytzstdUPt1uQJ2DbtPvp2mo6QPubDna63I2J89djFIcqTlzUaswTRj+IA==",
+  "dgSpecHash": "n6Xt1z+2HcxQ6B4HLAasRMGAvv5nwf+fGIg/jfI5REcW6XH46I2RC1/7rk+gdgXcSY+7J3M2ugk4vZnH3gwTfA==",
   "success": true,
   "projectFilePath": "D:\\VS_Projects\\GUI\\NetflixPart\\NetflixPart\\NetflixPart.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\molev\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "C:\\Users\\molev\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\molev\\.nuget\\packages\\microsoft.toolkit.mvvm\\7.1.2\\microsoft.toolkit.mvvm.7.1.2.nupkg.sha512"
+  ],
   "logs": []
 }

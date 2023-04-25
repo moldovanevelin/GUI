@@ -6,6 +6,13 @@
         xmlns:local="clr-namespace:NetflixPart"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.DataContext>
+        <local:MainWindowViewModel/>
+    </Window.DataContext>
+    <Window.Resources>
+        <local:LengthFormateConverter x:Key="LengthConv"/>
+        <local:BackgroundColorConverter x:Key="BackConv"/>
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
@@ -14,14 +21,24 @@
         </Grid.ColumnDefinitions>
         
         <!--#region Left Column-->
-        <ListBox Grid.Column="0">
-            
+        <ListBox x:Name="lb_left" Grid.Column="0" ItemsSource="{Binding Movies}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" Background="{Binding Rate,Converter={StaticResource BackConv}}">
+                        <Label Content="{Binding Title}" FontFamily="Times New Roman" FontSize="14" FontWeight="DemiBold"/>
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="{Binding Director}"  FontFamily="Times New Roman" FontSize="14"/>
+                            <Label Content="{Binding Length, Converter={StaticResource LengthConv}}"  FontFamily="Times New Roman" FontSize="14"/>
+                        </StackPanel>                        
+                    </StackPanel>                   
+                </DataTemplate>
+            </ListBox.ItemTemplate>
         </ListBox>
         <!--#endregion-->
         
         <!--#region Middle Column-->
         <StackPanel Grid.Column="1">
-            
+            <Button Content="Load Movies" Width="120" Height="40" Margin="10" Background="AliceBlue" FontFamily="Times New Roman" FontSize="16" Command="{Binding LoadCommand}"/>
         </StackPanel>
         <!--#endregion-->
         
