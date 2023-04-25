@@ -25,9 +25,29 @@ namespace NetflixPart
             get { return selectedFromMovies; }
             set
             {
-                SetProperty(ref selectedFromMovies, value);
+                SetProperty(ref selectedFromMovies, value);                
                 (AddCommand as RelayCommand).NotifyCanExecuteChanged();
                 (ShowCommand as RelayCommand).NotifyCanExecuteChanged();
+            }
+        }
+        private int movieCount;
+        public int MovieCount
+        {
+            get { return movieCount; }
+            set
+            {
+                SetProperty(ref movieCount, value);
+                OnPropertyChanged(nameof(MovieCount));
+            }
+        }
+        private int lengthSum;
+        public int LengthSum
+        {
+            get { return lengthSum; }
+            set
+            {
+                SetProperty(ref lengthSum, value);
+                OnPropertyChanged(nameof(LengthSum));
             }
         }
         public ICommand LoadCommand { get; set; }
@@ -51,7 +71,7 @@ namespace NetflixPart
             this.logic = logic;
             Movies = new ObservableCollection<Movie>();
             SelectedMovies = new ObservableCollection<Movie>();
-            logic.SetupCollection(Movies, SelectedMovies);
+            logic.SetupCollection(Movies, SelectedMovies,MovieCount,LengthSum);
             AddCommand = new RelayCommand(
                 () => logic.Add(SelectedFromMovies),
                 () => SelectedFromMovies != null
@@ -63,7 +83,7 @@ namespace NetflixPart
             ShowCommand = new RelayCommand(
                 () => new MovieDataWindow(SelectedFromMovies).ShowDialog(),
                 () => SelectedFromMovies != null
-                );
+                ); 
             
         }
         

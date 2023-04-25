@@ -12,12 +12,16 @@ namespace NetflixPart
     {
         IList<Movie> movies;
         IList<Movie> selectedMovies;
+        int movieCount;
+        int lengthSum;
         public MovieLogic()
         {
             
         }
-        public void SetupCollection(IList<Movie> movies, IList<Movie> selectedMovies)
+        public void SetupCollection(IList<Movie> movies, IList<Movie> selectedMovies, int movieCount, int lengthSum)
         {
+            this.movieCount = movieCount;
+            this.lengthSum = lengthSum;
             this.movies = movies;
             this.selectedMovies = selectedMovies;
         }
@@ -33,7 +37,9 @@ namespace NetflixPart
         {
             if (!selectedMovies.Contains(item))
             {
-                selectedMovies.Add(item);
+                movieCount += 1;
+                lengthSum += item.Length;
+                selectedMovies.Add(item);                              
             }
         }
     }
