@@ -21,12 +21,12 @@
         </Grid.ColumnDefinitions>
         
         <!--#region Left Column-->
-        <ListBox x:Name="lb_left" Grid.Column="0" ItemsSource="{Binding Movies}">
+        <ListBox x:Name="lb_left" Grid.Column="0" ItemsSource="{Binding Movies}"  SelectedItem="{Binding SelectedFromMovies}" HorizontalContentAlignment="Stretch">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" Background="{Binding Rate,Converter={StaticResource BackConv}}">
                         <Label Content="{Binding Title}" FontFamily="Times New Roman" FontSize="14" FontWeight="DemiBold"/>
-                        <StackPanel Orientation="Horizontal">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
                             <Label Content="{Binding Director}"  FontFamily="Times New Roman" FontSize="14"/>
                             <Label Content="{Binding Length, Converter={StaticResource LengthConv}}"  FontFamily="Times New Roman" FontSize="14"/>
                         </StackPanel>                        
@@ -39,12 +39,19 @@
         <!--#region Middle Column-->
         <StackPanel Grid.Column="1">
             <Button Content="Load Movies" Width="120" Height="40" Margin="10" Background="AliceBlue" FontFamily="Times New Roman" FontSize="16" Command="{Binding LoadCommand}"/>
+            <Button Content="Add Movies" Width="120" Height="40" Margin="10" Background="AliceBlue" FontFamily="Times New Roman" FontSize="16" Command="{Binding AddCommand}"/>
         </StackPanel>
         <!--#endregion-->
         
         <!--#region Right Column-->
-        <ListBox Grid.Column="2">
-            
+        <ListBox x:Name="lb_right" Grid.Column="2" ItemsSource="{Binding SelectedMovies}" HorizontalContentAlignment="Stretch">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch">
+                        <Label Content="{Binding Title}" Background="{Binding Rate,Converter={StaticResource BackConv}}" FontFamily="Times New Roman" FontSize="14" FontWeight="DemiBold"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
         </ListBox>
         <!--#endregion-->
     </Grid>

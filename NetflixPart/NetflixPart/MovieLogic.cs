@@ -11,9 +11,15 @@ namespace NetflixPart
     public class MovieLogic : IMovieLogic
     {
         IList<Movie> movies;
-        public void SetupCollection(IList<Movie> movies)
+        IList<Movie> selectedMovies;
+        public MovieLogic()
+        {
+            
+        }
+        public void SetupCollection(IList<Movie> movies, IList<Movie> selectedMovies)
         {
             this.movies = movies;
+            this.selectedMovies = selectedMovies;
         }
         public void GenerateMovies()
         {
@@ -22,6 +28,13 @@ namespace NetflixPart
             movies.Add(new Movie() { Title = "Old", Director = "M. Night Shyamalan", Length = 108, NumberOfPlay = 9880, Rate = 2.8 });
             movies.Add(new Movie() { Title = "The Godfather", Director = "Francis Ford Coppola", Length = 175, NumberOfPlay = 114560, Rate = 5 });
             movies.Add(new Movie() { Title = "The Truman Show", Director = "Chris Columbus", Length = 103, NumberOfPlay = 17840, Rate = 4.6 });            
+        }
+        public void Add(Movie item)
+        {
+            if (!selectedMovies.Contains(item))
+            {
+                selectedMovies.Add(item);
+            }
         }
     }
 }

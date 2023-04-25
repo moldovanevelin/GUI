@@ -15,7 +15,10 @@ namespace NetflixPart
 {
     public class MainWindowViewModel : ObservableRecipient
     {
+        IMovieLogic logic;
         public ObservableCollection<Movie> Movies { get; set; }
+        public ObservableCollection<Movie> SelectedMovies { get; set; }
+
         private Movie selectedFromMovies;
         public Movie SelectedFromMovies
         {
@@ -23,9 +26,11 @@ namespace NetflixPart
             set
             {
                 SetProperty(ref selectedFromMovies, value);
+                (AddCommand as RelayCommand).NotifyCanExecuteChanged();
             }
         }
         public ICommand LoadCommand { get; set; }
+        public ICommand AddCommand { get; set; }
         public static bool IsInDesignMode
         {
             get
@@ -41,12 +46,19 @@ namespace NetflixPart
         }
         public MainWindowViewModel(IMovieLogic logic)
         {
+            this.logic = logic;
             Movies = new ObservableCollection<Movie>();
-            logic.SetupCollection(Movies);
+            SelectedMovies = new ObservableCollection<Movie>();
+            logic.SetupCollection(Movies, SelectedMovies);
+            AddCommand = new RelayCommand(
+                () => logic.Add(SelectedFromMovies),
+                () => SelectedFromMovies != null
+                );
             LoadCommand = new RelayCommand(
                 ()=> logic.GenerateMovies(),
                 ()=> SelectedFromMovies == null
                 );
+            
         }
         
     }
