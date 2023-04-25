@@ -1,10 +1,12 @@
 {
   "ExpandedNodes": [
     "",
+    "\\Helpers",
     "\\Logic",
     "\\Models",
+    "\\Source",
     "\\ViewModels"
   ],
-  "SelectedNode": "\\ViewModels\\MainWindowViewModel.cs",
+  "SelectedNode": "\\Helpers\\EscapeUriConverter.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -27,7 +27,7 @@ namespace NetflixPart
         }
         public void GenerateMovies()
         {
-            movies.Add(new Movie() { Title = "Harry Potter an the Philosopher's Stone", Director = "Chris Columbus", Length = 152, NumberOfPlay = 12340, Rate = 4.1 });
+            movies.Add(new Movie() { Title = "Harry Potter and the Philosopher's Stone", Director = "Chris Columbus", Length = 152, NumberOfPlay = 12340, Rate = 4.1 });
             movies.Add(new Movie() { Title = "Memento", Director = "Christopher Nolan", Length = 113, NumberOfPlay = 21450, Rate = 4.8 });
             movies.Add(new Movie() { Title = "Old", Director = "M. Night Shyamalan", Length = 108, NumberOfPlay = 9880, Rate = 2.8 });
             movies.Add(new Movie() { Title = "The Godfather", Director = "Francis Ford Coppola", Length = 175, NumberOfPlay = 114560, Rate = 5 });

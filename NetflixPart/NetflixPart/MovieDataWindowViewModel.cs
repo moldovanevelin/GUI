@@ -10,9 +10,9 @@ namespace NetflixPart
     {
         public Movie Actual { get; set; }
 
-        public void Setup(Movie athlete)
+        public void Setup(Movie movie)
         {
-            this.Actual = athlete;
+            this.Actual = movie;
         }
         public MovieDataWindowViewModel()
         {

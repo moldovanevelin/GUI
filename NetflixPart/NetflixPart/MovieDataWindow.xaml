@@ -7,14 +7,16 @@
         mc:Ignorable="d"
         Title="MovieDataWindow" Height="450" Width="800">
     <Window.Resources>
-        <local:LengthFormateConverter x:Key="LengthConv"/>        
+        <local:LengthFormateConverter x:Key="LengthConv"/>
+        <local:UriConverter x:Key="UriConv"/>
     </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2.5*"/>
+            <ColumnDefinition Width="1.5*"/>
             <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel x:Name="stack" Grid.Column="1">
+        <Image Grid.Column="1" Source="{Binding Actual.Title, Converter={StaticResource UriConv}}"  Stretch="UniformToFill" Margin="4" />
+        <StackPanel x:Name="stack" Grid.Column="0">
             <Label Content="Title:" Padding="10" FontWeight="Bold" FontFamily="Times New Roman" FontSize="16" Background="AliceBlue"/>
             <Label Content="{Binding Actual.Title}" Padding="10" FontFamily="Times New Roman" FontSize="16"/>
             <Label Content="Directed by:" Padding="10" FontWeight="Bold" FontFamily="Times New Roman" FontSize="16" Background="AliceBlue"/>
